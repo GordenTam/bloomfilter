@@ -117,9 +117,10 @@ public class RedisBitMaps implements BitSet {
      * reset the bit map
      */
     void reset() {
-        String[] keys = LongStream.range(0, cursor() + 1).boxed().map(this::genkey).toArray(String[]::new);
-        List<String> keysArray = new ArrayList<>();
-        keysArray.
+        List<String> keys = new ArrayList<>();
+        for(int i = 0; i<=cursor(); i++){
+            keys.add(genkey(i));
+        }
         redisTemplate.delete(keys);
         redisTemplate.opsForValue().set(CURSOR, "0");
         redisTemplate.execute((RedisCallback<Boolean>) con -> con.setBit(currentKey().getBytes(Charset.forName("utf-8")), bitSize-1, false));
