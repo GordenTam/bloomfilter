@@ -1,0 +1,1 @@
+基于guava实现的bloom filter,支持redis存储,可以与spring集成,谁有空可以帮忙加个aop支持
