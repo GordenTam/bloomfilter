@@ -1,12 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9cb0476a-20d1-4790-9ba5-767788165076" name="Default Changelist" comment="" />
+    <list default="true" id="9cb0476a-20d1-4790-9ba5-767788165076" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/BitSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BitSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/BloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/BloomFilterStrategies.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilterStrategies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/LockFreeBitSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/LockFreeBitSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/SerializationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/SerializationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reidsbloomfilter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BloomFilter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with-spring/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with-spring/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with-spring/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with-spring/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with-spring/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with-spring/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with-spring/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/BloomFilterProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/BloomFilterProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/annotation/BFMightContain.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/annotation/BFMightContain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/annotation/BFPut.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/annotation/BFPut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/annotation/EnableBloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/annotation/EnableBloomFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/support/BloomFilterConfigurationSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/support/BloomFilterConfigurationSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/support/RedisBitMaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/support/RedisBitMaps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with-spring/src/test/java/org/gorden/bloomfilter/withspring/WithSpringApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/test/java/org/gorden/bloomfilter/withspring/WithSpringApplicationTests.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/redis-bloom-filter-core/target/" />
     <ignored path="$PROJECT_DIR$/core/target/" />
     <ignored path="$PROJECT_DIR$/with-spring/target/" />
+    <ignored path="$PROJECT_DIR$/bloomfilter-aop/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,44 +54,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor>
-                <caret column="45" selection-start-column="45" selection-end-column="45" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/bloomfilter-aop/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/BloomFilter.java">
+        <entry file="file://$PROJECT_DIR$/bloomfilter-aop/src/main/java/org/gorden/bloomfilter/aop/aspect/BloomFilterAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="80" selection-start-line="80" selection-end-line="83" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6201#6202#0" expanded="true" />
-                <element signature="e#6285#6286#0" expanded="true" />
-                <element signature="e#6491#6492#0" expanded="true" />
-                <element signature="e#6533#6534#0" expanded="true" />
-                <element signature="e#7363#7364#0" expanded="true" />
-                <element signature="e#7438#7439#0" expanded="true" />
-                <element signature="e#9401#9402#0" expanded="true" />
-                <element signature="e#9438#9439#0" expanded="true" />
-                <element signature="e#12363#12364#0" expanded="true" />
-                <element signature="e#12444#12445#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/BloomFilterStrategies.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1554">
-              <caret line="156" column="41" selection-start-line="156" selection-start-column="41" selection-end-line="156" selection-end-column="41" />
+            <state relative-caret-position="975">
+              <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,10 +75,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/LockFreeBitSet.java">
+        <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="38" />
+            <state relative-caret-position="2910">
+              <caret line="214" column="93" selection-start-line="214" selection-start-column="63" selection-end-line="214" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,64 +87,73 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/support/RedisBitMaps.java">
+        <entry file="file://$PROJECT_DIR$/bloomfilter-aop/src/main/java/org/gorden/bloomfilter/aop/annotation/BFMightContain.aj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="72" column="34" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+            <state relative-caret-position="100">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bloomfilter-aop/src/main/java/org/gorden/bloomfilter/aop/annotation/BFPut.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/LockFreeBitSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="28" column="66" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2118#2119#0" expanded="true" />
-                <element signature="e#2153#2154#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.1.2.RELEASE/spring-data-redis-2.1.2.RELEASE.jar!/org/springframework/data/redis/core/RedisTemplate.class">
+        <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/support/RedisBitMaps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="902">
-              <caret line="122" column="17" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
+            <state relative-caret-position="840">
+              <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
               <folding>
-                <element signature="e#4737#4738#0" expanded="true" />
-                <element signature="e#4807#4808#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/BitSet.java">
+        <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/SerializationException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="20" selection-start-line="20" selection-end-line="22" selection-end-column="7" />
+            <state relative-caret-position="105">
+              <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.1.2.RELEASE/spring-data-redis-2.1.2.RELEASE.jar!/org/springframework/data/redis/core/RedisCallback.class">
+        <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/annotation/EnableBloomFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="120">
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/with-spring/pom.xml">
+        <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/support/BloomFilterConfigurationSelector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="105">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -144,8 +163,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
         <option value="Class" />
+        <option value="AnnotationType" />
+        <option value="Aspect" />
       </list>
     </option>
   </component>
@@ -164,6 +184,9 @@
       <find>mightContain</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -180,13 +203,19 @@
         <option value="$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/annotation/BFMightCOntain.java" />
         <option value="$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/BloomFilterProperties.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/RedisBitmaps.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/core/pom.xml" />
         <option value="$PROJECT_DIR$/with-spring/pom.xml" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/support/RedisBitmaps.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/BitSet.java" />
         <option value="$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/support/RedisBitMaps.java" />
+        <option value="$PROJECT_DIR$/bloomfilter-core/pom.xml" />
+        <option value="$PROJECT_DIR$/bloomfilter-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/bloomfilter-aop/src/main/java/org/gorden/bloomfilter/aop/annotation/BloomFilter.java" />
+        <option value="$PROJECT_DIR$/bloomfilter-aop/src/main/java/org/gorden/bloomfilter/aop/aspect/BloomFilterAspect.java" />
+        <option value="$PROJECT_DIR$/bloomfilter-aop/src/main/java/org/gorden/bloomfilter/aop/annotation/BFPut.java" />
+        <option value="$PROJECT_DIR$/bloomfilter-aop/src/main/java/org/gorden/bloomfilter/aop/annotation/BFMightContain.aj" />
       </list>
     </option>
   </component>
@@ -202,11 +231,13 @@
     <option name="width" value="790" />
     <option name="height" value="599" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,60 +248,25 @@
             <path>
               <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
               <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="bloomfilter-aop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
               <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="bloomfilter-aop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
               <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="with-spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="with-spring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="with-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="bloomfilter-aop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
               <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="with-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="bloomfilter-aop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -278,31 +274,84 @@
             <path>
               <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
               <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="with-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="bloomfilter-aop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="withspring" type="462c0819:PsiDirectoryNode" />
+              <item name="aop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
               <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="with-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="bloomfilter-aop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="withspring" type="462c0819:PsiDirectoryNode" />
+              <item name="aop" type="462c0819:PsiDirectoryNode" />
               <item name="annotation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
               <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="with-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="bloomfilter-aop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="withspring" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
+              <item name="aop" type="462c0819:PsiDirectoryNode" />
+              <item name="aspect" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
+              <item name="bloomfilter-core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
+              <item name="bloomfilter-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
+              <item name="bloomfilter-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
+              <item name="bloomfilter-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
+              <item name="bloomfilter-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-boot-starter-bloomfilter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-boot-starter-bloomfilter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reidsbloomfilter" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-boot-starter-bloomfilter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reidsbloomfilter" type="b2602c69:ProjectViewProjectNode" />
@@ -312,13 +361,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -346,14 +396,14 @@
   </component>
   <component name="RunManager" selected="Spring Boot.CoreApplication">
     <configuration name="CoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="core" />
+      <module name="bloomfilter-core" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.gorden.bloomfilter.core.CoreApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="WithSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="with-spring" />
+      <module name="spring-boot-starter-bloomfilter" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.gorden.bloomfilter.withspring.WithSpringApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -371,26 +421,27 @@
       <option name="presentableId" value="Default" />
       <updated>1576552517857</updated>
       <workItem from="1576552543751" duration="447000" />
-      <workItem from="1576554006123" duration="41852000" />
+      <workItem from="1576554006123" duration="53001000" />
+      <workItem from="1576827587419" duration="2264000" />
+      <workItem from="1577689408968" duration="487000" />
+      <workItem from="1577695167161" duration="5003000" />
+      <workItem from="1577710668201" duration="806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42299000" />
+    <option name="totallyTimeSpent" value="62008000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="3536" height="1913" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15854357" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16198395" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.22297297" />
@@ -401,8 +452,10 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.34797296" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2748307" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Spring" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -418,34 +471,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/redis-bloom-filter-core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/CoreApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/primitives/Longs.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4428">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Documents/jdk1.8.0_191/src.zip!/java/util/BitSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-269">
-          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Documents/jdk1.8.0_191/src.zip!/java/util/concurrent/atomic/AtomicLongArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1176">
@@ -457,16 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/annotation/BFPut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -632,44 +647,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/SerializationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/support/BloomFilterConfigurationSelector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/annotation/BFMightContain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/WithSpringApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/annotation/EnableBloomFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/WithSpringApplication.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/JedisPool.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -677,69 +655,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/JedisUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/RedisBitmaps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1369#1370#0" expanded="true" />
-            <element signature="e#1455#1456#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/with-spring/with-spring.iml">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/JedisUtils.java" />
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/RedisBitmaps.java" />
+    <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/spring-boot-starter-bloomfilter.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/BloomFilterProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#635#636#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#770#771#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#934#935#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/with-spring/pom.xml">
+    <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="626">
           <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilterStrategies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1554">
+          <caret line="156" column="41" selection-start-line="156" selection-start-column="41" selection-end-line="156" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.1.2.RELEASE/spring-data-redis-2.1.2.RELEASE.jar!/org/springframework/data/redis/core/RedisCallback.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -753,63 +694,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/BloomFilter.java">
+    <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/BloomFilterProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="80" selection-start-line="80" selection-end-line="83" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6201#6202#0" expanded="true" />
-            <element signature="e#6285#6286#0" expanded="true" />
-            <element signature="e#6491#6492#0" expanded="true" />
-            <element signature="e#6533#6534#0" expanded="true" />
-            <element signature="e#7363#7364#0" expanded="true" />
-            <element signature="e#7438#7439#0" expanded="true" />
-            <element signature="e#9401#9402#0" expanded="true" />
-            <element signature="e#9438#9439#0" expanded="true" />
-            <element signature="e#12363#12364#0" expanded="true" />
-            <element signature="e#12444#12445#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/BloomFilterStrategies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1554">
-          <caret line="156" column="41" selection-start-line="156" selection-start-column="41" selection-end-line="156" selection-end-column="41" />
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/LockFreeBitSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/gorden/bloomfilter/core/BitSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="20" selection-start-line="20" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.1.2.RELEASE/spring-data-redis-2.1.2.RELEASE.jar!/org/springframework/data/redis/core/RedisCallback.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.1.2.RELEASE/spring-data-redis-2.1.2.RELEASE.jar!/org/springframework/data/redis/core/RedisTemplate.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
+        <state relative-caret-position="420">
           <caret line="122" column="17" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
           <folding>
             <element signature="e#4737#4738#0" expanded="true" />
@@ -818,15 +715,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/with-spring/src/main/java/org/gorden/bloomfilter/withspring/support/RedisBitMaps.java">
+    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BitSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="72" column="34" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+        <state relative-caret-position="195">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bloomfilter-core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/annotation/BFMightContain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/annotation/BFPut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2118#2119#0" expanded="true" />
-            <element signature="e#2153#2154#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.9.2/aspectjrt-1.9.2.jar!/org/aspectj/lang/annotation/Pointcut.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bloomfilter-aop/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bloomfilter-aop/src/main/java/org/gorden/bloomfilter/aop/aspect/BloomFilterAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2910">
+          <caret line="214" column="93" selection-start-line="214" selection-start-column="63" selection-end-line="214" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bloomfilter-aop/src/main/java/org/gorden/bloomfilter/aop/annotation/BFPut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/LockFreeBitSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="28" column="66" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/support/RedisBitMaps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/SerializationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/annotation/EnableBloomFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/withspring/support/BloomFilterConfigurationSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bloomfilter-aop/src/main/java/org/gorden/bloomfilter/aop/annotation/BFMightContain.aj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>

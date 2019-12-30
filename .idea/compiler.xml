@@ -6,7 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="with-spring" />
+        <module name="spring-boot-starter-bloomfilter" />
+        <module name="bloomfilter-aop" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -15,8 +16,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="core" options="" />
-      <module name="with-spring" options="" />
+      <module name="bloomfilter-core" options="" />
+      <module name="spring-boot-starter-bloomfilter" options="" />
     </option>
   </component>
 </project>
