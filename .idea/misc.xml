@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/core/pom.xml" />
         <option value="$PROJECT_DIR$/with-spring/pom.xml" />
         <option value="$PROJECT_DIR$/bloomfilter-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/redis/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

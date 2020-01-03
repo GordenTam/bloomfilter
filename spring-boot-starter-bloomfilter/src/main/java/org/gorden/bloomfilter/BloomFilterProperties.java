@@ -1,7 +1,6 @@
 package org.gorden.bloomfilter;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +11,20 @@ import java.util.List;
 @ConfigurationProperties(prefix = "bloom-filter")
 public class BloomFilterProperties {
 
+    private BloomFilterType type;
+
     private List<String> names = new ArrayList<>();
+
+    public BloomFilterProperties() {
+    }
+
+    public BloomFilterType getType() {
+        return this.type;
+    }
+
+    public void setType(BloomFilterType mode) {
+        this.type = mode;
+    }
 
     private long expectedInsertions;
 
@@ -40,5 +52,12 @@ public class BloomFilterProperties {
 
     public void setFpp(double fpp) {
         this.fpp = fpp;
+    }
+
+    public enum BloomFilterType {
+        GENERIC,
+        REDIS;
+        private BloomFilterType() {
+        }
     }
 }

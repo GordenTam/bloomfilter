@@ -11,8 +11,8 @@
 
     <modules>
         <module>bloomfilter-core</module>
-        <module>bloomfilter-aop</module>
-        <module>with-spring</module>
+        <module>bloomfilter-aspect</module>
+        <module>bloomfilter-redis</module>
     </modules>
 
 

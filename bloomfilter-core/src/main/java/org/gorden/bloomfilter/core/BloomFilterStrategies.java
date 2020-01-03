@@ -4,7 +4,6 @@ package org.gorden.bloomfilter.core;
  * @author: GordenTam
  * @create: 2019-12-17
  **/
-import com.google.common.base.Charsets;
 import com.google.common.hash.Hashing;
 import com.google.common.primitives.Longs;
 
@@ -25,7 +24,7 @@ import java.nio.charset.Charset;
  * @author Dimitris Andreou
  * @author Kurt Alfred Kluever
  */
-enum BloomFilterStrategies implements BloomFilter.Strategy {
+enum BloomFilterStrategies implements DefaultBloomFilter.Strategy {
     /**
      * See "Less Hashing, Same Performance: Building a Better Bloom Filter" by Adam Kirsch and Michael
      * Mitzenmacher. The paper argues that this trick doesn't significantly deteriorate the

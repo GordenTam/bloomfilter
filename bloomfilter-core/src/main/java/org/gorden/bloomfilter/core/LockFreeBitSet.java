@@ -13,7 +13,7 @@ import static com.google.common.base.Preconditions.checkArgument;
  * We use this instead of java.util.BitSet because we need access to the array of longs and we
  * need compare-and-swap.
  *
- * @author: GordenTam
+ * @author GordenTam
  * @create: 2019-12-17
  */
 public class LockFreeBitSet implements BitSet{

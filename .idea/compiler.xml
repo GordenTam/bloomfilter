@@ -6,17 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="bloomfilter-aspect" />
+        <module name="bloomfilter-redis" />
         <module name="spring-boot-starter-bloomfilter" />
-        <module name="bloomfilter-aop" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="redisbloomfiltercore" target="1.5" />
+      <module name="spring-boot-starter-bloomfilter" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="bloomfilter-core" options="" />
+      <module name="bloomfilter-redis" options="" />
       <module name="spring-boot-starter-bloomfilter" options="" />
     </option>
   </component>
