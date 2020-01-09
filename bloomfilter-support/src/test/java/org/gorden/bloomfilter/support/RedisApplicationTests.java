@@ -1,4 +1,4 @@
-package org.gorden.bloomfilter.redis;
+package org.gorden.bloomfilter.support;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

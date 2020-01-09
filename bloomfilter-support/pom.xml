@@ -10,9 +10,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>bloomfilter-redis</artifactId>
+    <artifactId>bloomfilter-support</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>bloomfilter-redis</name>
+    <name>bloomfilter-support</name>
     <description>redis support for bloomfilter</description>
 
     <properties>

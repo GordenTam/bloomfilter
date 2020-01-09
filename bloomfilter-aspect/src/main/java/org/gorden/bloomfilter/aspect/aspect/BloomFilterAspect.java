@@ -1,13 +1,11 @@
 package org.gorden.bloomfilter.aspect.aspect;
 
-import com.google.common.base.Throwables;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 
-import java.io.IOException;
 import java.lang.reflect.Method;
 
 /**

@@ -6,6 +6,7 @@ package org.gorden.bloomfilter.core;
  **/
 import com.google.common.hash.Hashing;
 import com.google.common.primitives.Longs;
+import org.gorden.bloomfilter.core.bitset.BitSet;
 
 import java.io.*;
 import java.nio.ByteBuffer;

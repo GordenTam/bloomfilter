@@ -3,7 +3,7 @@ package org.gorden.bloomfilter.support;
 import com.google.common.base.Preconditions;
 import com.google.common.math.LongMath;
 import com.google.common.primitives.Longs;
-import org.gorden.bloomfilter.core.BitSet;
+import org.gorden.bloomfilter.core.bitset.BitSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.RedisCallback;
@@ -20,9 +20,9 @@ import java.util.List;
  * @create: 2019-12-17
  **/
 
-public class RedisBitMaps implements BitSet {
+public class RedisBitSet implements BitSet {
 
-    private static final Logger logger = LoggerFactory.getLogger(RedisBitMaps.class);
+    private static final Logger logger = LoggerFactory.getLogger(RedisBitSet.class);
 
     private static final String BASE_KEY = "bloomFilter";
 
@@ -32,7 +32,7 @@ public class RedisBitMaps implements BitSet {
 
     private long bitSize;
 
-    public RedisBitMaps(long bits, RedisTemplate<String,String> redisTemplate) {
+    public RedisBitSet(long bits, RedisTemplate<String,String> redisTemplate) {
         //bit size must be n*64
         this.redisTemplate = redisTemplate;
         this.bitSize = LongMath.divide(bits, 64, RoundingMode.CEILING) * Long.SIZE;//位数组的长度，相当于n个long的长度
