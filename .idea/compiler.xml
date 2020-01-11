@@ -6,9 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bloomfilter-support" />
+        <module name="bloomfilter-spring-data-redis-support" />
         <module name="bloomfilter-aop" />
+        <module name="spring-boot-starter-bloomfilter" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bloomfilter-spring-data-redis-support" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

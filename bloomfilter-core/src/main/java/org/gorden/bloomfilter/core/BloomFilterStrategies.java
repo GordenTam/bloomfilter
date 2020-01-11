@@ -7,6 +7,7 @@ package org.gorden.bloomfilter.core;
 import com.google.common.hash.Hashing;
 import com.google.common.primitives.Longs;
 import org.gorden.bloomfilter.core.bitset.BitSet;
+import org.gorden.bloomfilter.core.serializer.SerializationException;
 
 import java.io.*;
 import java.nio.ByteBuffer;
@@ -25,7 +26,7 @@ import java.nio.charset.Charset;
  * @author Dimitris Andreou
  * @author Kurt Alfred Kluever
  */
-enum BloomFilterStrategies implements DefaultBloomFilter.Strategy {
+enum BloomFilterStrategies implements BloomFilter.Strategy {
     /**
      * See "Less Hashing, Same Performance: Building a Better Bloom Filter" by Adam Kirsch and Michael
      * Mitzenmacher. The paper argues that this trick doesn't significantly deteriorate the

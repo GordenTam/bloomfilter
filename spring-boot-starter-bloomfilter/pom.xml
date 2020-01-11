@@ -9,10 +9,10 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>with-spring</artifactId>
+    <artifactId>spring-boot-starter-bloomfilter</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>with-spring</name>
-    <description>add bloom filter to spring</description>
+    <name>spring-boot-starter-bloomfilter</name>
+    <description>add spring boot auto config for bloom filter</description>
 
     <properties>
         <java.version>1.8</java.version>

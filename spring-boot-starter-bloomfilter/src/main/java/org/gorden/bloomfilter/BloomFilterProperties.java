@@ -57,7 +57,6 @@ public class BloomFilterProperties {
     public enum BloomFilterType {
         GENERIC,
         REDIS;
-        private BloomFilterType() {
-        }
+        private BloomFilterType() {}
     }
 }

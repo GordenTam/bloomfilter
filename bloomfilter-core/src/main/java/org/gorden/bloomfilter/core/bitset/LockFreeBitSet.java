@@ -1,8 +1,6 @@
 package org.gorden.bloomfilter.core.bitset;
 
-import com.google.common.math.LongMath;
 import com.google.common.primitives.Ints;
-import java.math.RoundingMode;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicLongArray;
 
@@ -15,16 +13,21 @@ public class LockFreeBitSet implements BitSet {
     private final AtomicLongArray data;
     private final AtomicLong bitCount;
 
-    LockFreeBitSet(long bits) {
+    public LockFreeBitSet(long bits) {
         if(bits <= 0){
             throw new IllegalArgumentException("data length is zero!");
         }
 
-        this.data = new AtomicLongArray(Ints.checkedCast(LongMath.divide(bits, 64, RoundingMode.CEILING)));
+        long numberOfLong = this.divide(bits, 64);
+        int numberOfLongIntValue = (int)numberOfLong;
+        if((long)numberOfLongIntValue != numberOfLong){
+            throw new IllegalArgumentException(String.format("Out of range: %s", numberOfLong));
+        }
+        this.data = new AtomicLongArray(Ints.checkedCast(this.divide(bits, 64)));
         this.bitCount = new AtomicLong(0);
     }
 
-    LockFreeBitSet(long[] data) {
+    public LockFreeBitSet(long[] data) {
         if(data.length <= 0){
             throw new IllegalArgumentException("data length is zero!");
         }
@@ -69,5 +72,17 @@ public class LockFreeBitSet implements BitSet {
 
     public long bitCount() {
         return bitCount.get();
+    }
+
+    private long divide(long p, long q) {
+        long div = p / q;
+        long rem = p - q * div;
+        if (rem == 0L) {
+            return div;
+        } else {
+            int signum = 1 | (int)((p ^ q) >> 63);
+            boolean increment = signum > 0;;
+            return increment ? div + (long)signum : div;
+        }
     }
 }

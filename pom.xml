@@ -12,7 +12,7 @@
     <modules>
         <module>bloomfilter-core</module>
         <module>bloomfilter-aspect</module>
-        <module>bloomfilter-redis</module>
+        <module>spring-boot-starter-bloomfilter</module>
     </modules>
 
 
