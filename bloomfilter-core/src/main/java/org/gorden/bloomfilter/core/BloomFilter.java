@@ -1,6 +1,7 @@
 package org.gorden.bloomfilter.core;
 
 import com.google.common.math.DoubleMath;
+import com.google.common.primitives.Longs;
 import org.gorden.bloomfilter.core.bitset.BitSet;
 import org.gorden.bloomfilter.core.bitset.LockFreeBitSet;
 import org.gorden.bloomfilter.core.hash.Hasher;
