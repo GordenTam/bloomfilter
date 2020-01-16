@@ -10,14 +10,13 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>bloomfilter-support</artifactId>
+    <artifactId>bloomfilter-spring-data-redis-support</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>bloomfilter-support</name>
-    <description>redis support for bloomfilter</description>
+    <name>bloomfilter-spring-data-redis-support</name>
+    <description>spring data redis support for bloomfilter</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <aspectj.version>1.9.2</aspectj.version>
     </properties>
 
     <dependencies>

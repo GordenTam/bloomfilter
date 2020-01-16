@@ -4,18 +4,13 @@ import com.google.common.base.Preconditions;
 import com.google.common.math.LongMath;
 import com.google.common.primitives.Longs;
 import org.gorden.bloomfilter.core.bitset.BitSet;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.data.redis.core.RedisCallback;
-import org.springframework.data.redis.core.RedisTemplate;
 import java.math.RoundingMode;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * bitSet implements by redis bitmaps and can Dynamic expansion
+ * BitSet implements by redis bitmaps
  * @author: GordenTam
  * @create: 2019-12-17
  **/

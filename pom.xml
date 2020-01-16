@@ -12,6 +12,7 @@
     <modules>
         <module>bloomfilter-core</module>
         <module>bloomfilter-aspect</module>
+        <module>bloomfilter-spring-data-redis-support</module>
         <module>spring-boot-starter-bloomfilter</module>
     </modules>
 

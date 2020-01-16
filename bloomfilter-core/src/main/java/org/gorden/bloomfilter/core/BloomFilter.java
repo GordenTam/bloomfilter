@@ -1,17 +1,14 @@
 package org.gorden.bloomfilter.core;
 
 import com.google.common.math.DoubleMath;
-import com.google.common.primitives.Longs;
 import org.gorden.bloomfilter.core.bitset.BitSet;
-import org.gorden.bloomfilter.core.bitset.LockFreeBitSet;
 import org.gorden.bloomfilter.core.hash.Hasher;
+import org.gorden.bloomfilter.core.hash.Longs;
 import org.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
-import org.gorden.bloomfilter.core.serializer.JdkSerializationBloomFilterSerializer;
-
 import java.math.RoundingMode;
 
 /**
- * A Bloom filter implements refer to guava.Support optional bitSet,hashFunction and serializer implements.
+ * A Bloom filter implements refer to guava. Support optional bitSet, hashFunction and serializer implements.
  *
  * @author GordenTam
  */
@@ -26,23 +23,10 @@ public class BloomFilter<T> implements Membership<T> {
     private BitSet bitSet;
 
     public BloomFilter(long expectedInsertions, double fpp) {
-        this(expectedInsertions, fpp, new JdkSerializationBloomFilterSerializer());
-    }
-
-    public BloomFilter(long expectedInsertions, double fpp, Hasher hasher) {
-        this(expectedInsertions, fpp, new JdkSerializationBloomFilterSerializer(), bloomFilterSerializer);
-    }
-
-    public BloomFilter(long expectedInsertions, double fpp, BloomFilterSerializer bloomFilterSerializer) {
-        this(expectedInsertions, fpp, new JdkSerializationBloomFilterSerializer(), bloomFilterSerializer);
+        this(expectedInsertions, fpp);
     }
 
     public BloomFilter(long expectedInsertions, double fpp, BloomFilterSerializer bloomFilterSerializer, Hasher hasher) {
-        long numBits = optimalNumOfBits(expectedInsertions, fpp);
-        this(expectedInsertions, fpp, new LockFreeBitSet(numBits), bloomFilterSerializer, hasher);
-    }
-
-    public BloomFilter(long expectedInsertions, double fpp, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, Hasher hasher) {
         if (expectedInsertions <= 0) {
             throw new IllegalArgumentException(String.format("expectedInsertions (%s) must be > 0", expectedInsertions));
         }
@@ -54,30 +38,14 @@ public class BloomFilter<T> implements Membership<T> {
         }
         long numBits = optimalNumOfBits(expectedInsertions, fpp);
         int numHashFunctions = optimalNumOfHashFunctions(expectedInsertions, numBits);
-        this(numHashFunctions, new LockFreeBitSet(numBits), bloomFilterSerializer, hasher);
+        this(numHashFunctions, bloomFilterSerializer, hasher);
     }
 
     private BloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, Hasher hasher) {
-        if (expectedInsertions <= 0) {
-            throw new IllegalArgumentException(String.format("expectedInsertions (%s) must be > 0", expectedInsertions));
+        if (bitSet == null || bloomFilterSerializer == null || hasher == null) {
+            throw new NullPointerException();
         }
-        if (fpp >= 1.0) {
-            throw new IllegalArgumentException(String.format("numHashFunctions (%s) must be < 1.0", fpp));
-        }
-        if (fpp <= 0.0) {
-            throw new IllegalArgumentException(String.format("numHashFunctions (%s) must be > 0.0", fpp));
-        }
-        if (bitSet == null) {
-            throw new IllegalArgumentException("bitSet can not be null");
-        }
-        if (bloomFilterSerializer == null) {
-            throw new IllegalArgumentException("bloomFilterSerializer can not be null");
-        }
-        if (hasher == null) {
-            throw new IllegalArgumentException("hasher can not be null");
-        }
-        long numBits = optimalNumOfBits(expectedInsertions, fpp);
-        this.numHashFunctions = optimalNumOfHashFunctions(expectedInsertions, numBits);
+        this.numHashFunctions = numHashFunctions;
         this.bitSet = bitSet;
         this.bloomFilterSerializer = bloomFilterSerializer;
         this.hasher = hasher;
@@ -138,11 +106,11 @@ public class BloomFilter<T> implements Membership<T> {
         return bitSet.bitSize();
     }
 
-    static int optimalNumOfHashFunctions(long n, long m) {
+    private int optimalNumOfHashFunctions(long n, long m) {
         return Math.max(1, (int) Math.round((double) m / n * Math.log(2)));
     }
 
-    static long optimalNumOfBits(long n, double p) {
+    private long optimalNumOfBits(long n, double p) {
         if (p == 0) {
             p = Double.MIN_VALUE;
         }

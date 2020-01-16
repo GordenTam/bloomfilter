@@ -1,15 +1,8 @@
 package org.gorden.bloomfilter.core.hash;
 
-import com.google.common.hash.HashCode;
-import com.google.common.primitives.UnsignedBytes;
-
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.util.Arrays;
-
 /**
  * @author GordenTam
- * copy from guava
+ * murmur3 hash 128 bit implement refer to guava
  **/
 
 public class Murmur3_128Hasher implements Hasher {
@@ -29,25 +22,31 @@ public class Murmur3_128Hasher implements Hasher {
     }
 
     public byte[] hashBytes(byte[] bytes) {
-        this.length = bytes.length;
-        int len = bytes.length;
-        int position = 0;
-        while (len - position >= 16) {
-            long k1 = convertLongFromByteArray(bytes, position, true);
-            long k2 = convertLongFromByteArray(bytes, position+8, true);
+        return hashBytes(bytes, 0, bytes.length);
+    }
+
+    public byte[] hashBytes(byte[] bytes, int offset, int length) {
+        if(length <= 0 || length> bytes.length) {
+            throw new IllegalArgumentException("Negative length: " + length);
+        }
+        if(offset < 0 || offset + length > bytes.length) {
+            throw new IndexOutOfBoundsException();
+        }
+        this.length = length;
+        int remainByteLength = length;
+        int position = offset;
+
+        //processing
+        while (remainByteLength >= 16) {
+            long k1 = Longs.fromByteArray(bytes, position, true);
+            long k2 = Longs.fromByteArray(bytes, position + 8, true);
             bmix64(k1, k2);
-            position+=16;
+            position += 16;
+            remainByteLength -= 16;
         }
 
+        processRemaining(bytes, position, remainByteLength);
         return this.makeHash();
-    }
-
-    public byte[] hashBytes(byte[] var1, int var2, int var3) {
-
-    }
-
-    protected void process(long k1, long k2) {
-        this.bmix64(k1, k2);
     }
 
     private void bmix64(long k1, long k2) {
@@ -61,42 +60,41 @@ public class Murmur3_128Hasher implements Hasher {
         this.h2 = this.h2 * 5L + 944331445L;
     }
 
-    protected void processRemaining(byte [] bytes, int position) {
+    private void processRemaining(byte[] bytes, int position, int length) {
         long k1 = 0L;
         long k2 = 0L;
-        int remain = bytes.length - position;
-        switch(remain) {
+        switch(length) {
             case 7:
-                k1 ^= (long) UnsignedBytes.toInt(bytes[position+6]) << 48;
+                k1 ^= (long)(bytes[position+6] & 255) << 48;
             case 6:
-                k1 ^= (long)UnsignedBytes.toInt(bytes[position+5]) << 40;
+                k1 ^= (long)(bytes[position+5] & 255) << 40;
             case 5:
-                k1 ^= (long)UnsignedBytes.toInt(bytes[position+4]) << 32;
+                k1 ^= (long)(bytes[position+4] & 255) << 32;
             case 4:
-                k1 ^= (long)UnsignedBytes.toInt(bytes[position+3]) << 24;
+                k1 ^= (long)(bytes[position+3] & 255) << 24;
             case 3:
-                k1 ^= (long)UnsignedBytes.toInt(bytes[position+2]) << 16;
+                k1 ^= (long)(bytes[position+2] & 255) << 16;
             case 2:
-                k1 ^= (long)UnsignedBytes.toInt(bytes[position+1]) << 8;
+                k1 ^= (long)(bytes[position+1] & 255) << 8;
             case 1:
-                k1 ^= (long)UnsignedBytes.toInt(bytes[position]);
+                k1 ^= (long)(bytes[position] & 255);
                 break;
             case 15:
-                k2 ^= (long)UnsignedBytes.toInt(bytes[position+14]) << 48;
+                k2 ^= (long)(bytes[position+14] & 255) << 48;
             case 14:
-                k2 ^= (long)UnsignedBytes.toInt(bytes[position+13]) << 40;
+                k2 ^= (long)(bytes[position+13] & 255) << 40;
             case 13:
-                k2 ^= (long)UnsignedBytes.toInt(bytes[position+12]) << 32;
+                k2 ^= (long)(bytes[position+12] & 255) << 32;
             case 12:
-                k2 ^= (long)UnsignedBytes.toInt(bytes[position+11]) << 24;
+                k2 ^= (long)(bytes[position+11] & 255) << 24;
             case 11:
-                k2 ^= (long)UnsignedBytes.toInt(bytes[position+10]) << 16;
+                k2 ^= (long)(bytes[position+10] & 255) << 16;
             case 10:
-                k2 ^= (long)UnsignedBytes.toInt(bytes[position+9]) << 8;
+                k2 ^= (long)(bytes[position+9] & 255) << 8;
             case 9:
-                k2 ^= (long)UnsignedBytes.toInt(bytes[position+8]);
+                k2 ^= (long)(bytes[position+8] & 255);
             case 8:
-                k1 ^= bytes[position+14];
+                k1 ^= Longs.fromByteArray(bytes, position, true);;
                 break;
             default:
                 throw new AssertionError("Should never get here.");
@@ -106,7 +104,7 @@ public class Murmur3_128Hasher implements Hasher {
         this.h2 ^= mixK2(k2);
     }
 
-    public byte[] makeHash() {
+    private byte[] makeHash() {
         this.h1 ^= (long)this.length;
         this.h2 ^= (long)this.length;
         this.h1 += this.h2;
@@ -115,10 +113,12 @@ public class Murmur3_128Hasher implements Hasher {
         this.h2 = fmix64(this.h2);
         this.h1 += this.h2;
         this.h2 += this.h1;
-        byte[] byteArrayOfH1 = convertLongToByteArray(h1);
-        byte[] byteArrayOfH2 = convertLongToByteArray(h2);
-        byte[] combine = new byte[16];
-
+        byte[] byteArrayOfH1 = Longs.toByteArray(h1);
+        byte[] byteArrayOfH2 = Longs.toByteArray(h2);
+        byte[] combine = new byte[byteArrayOfH1.length + byteArrayOfH2.length];
+        System.arraycopy(byteArrayOfH1, 0, combine, 0, byteArrayOfH1.length);
+        System.arraycopy(byteArrayOfH2, 0, combine, byteArrayOfH1.length, byteArrayOfH2.length);
+        return combine;
     }
 
     private static long fmix64(long k) {
@@ -130,43 +130,17 @@ public class Murmur3_128Hasher implements Hasher {
         return k;
     }
 
-    private static long convertLongFromByteArray(byte[] bytes, int offset, boolean littleEndian){
-        if(offset < 0){
-            throw new IllegalArgumentException("offset must larger be positive");
-        }
-        long value = 0;
-        for(int count = 0; count < 8; ++count){
-            int shift= (littleEndian ? count : (7 - count)) << 3;
-            value |= ((long)0xff << shift) & ((long)bytes[offset + count] << shift);
-        }
-        return value;
-    }
-
-    private static byte[] convertLongToByteArray(long x){
-        byte[] bytes = new byte[18];
-        int index = 0;
-        bytes[index + 7] = (byte) (x >> 56);
-        bytes[index + 6] = (byte) (x >> 48);
-        bytes[index + 5] = (byte) (x >> 40);
-        bytes[index + 4] = (byte) (x >> 32);
-        bytes[index + 3] = (byte) (x >> 24);
-        bytes[index + 2] = (byte) (x >> 16);
-        bytes[index + 1] = (byte) (x >> 8);
-        bytes[index] = (byte) (x);
-        return bytes;
-    }
-
     private static long mixK1(long k1) {
-        k1 *= -8663945395140668459L;
+        k1 *= C1;
         k1 = Long.rotateLeft(k1, 31);
-        k1 *= 5545529020109919103L;
+        k1 *= C2;
         return k1;
     }
 
     private static long mixK2(long k2) {
-        k2 *= 5545529020109919103L;
+        k2 *= C2;
         k2 = Long.rotateLeft(k2, 33);
-        k2 *= -8663945395140668459L;
+        k2 *= C1;
         return k2;
     }
 }
