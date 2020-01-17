@@ -17,11 +17,13 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 
 public class RedisBloomFilter<T> extends BloomFilter<T> {
 
+    private String name;
+
     private RedisBloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, Hasher hasher) {
         super(numHashFunctions, bitSet, bloomFilterSerializer, hasher);
     }
 
-    public static <T> RedisBloomFilter<T> create(long expectedInsertions, double fpp, RedisConnectionFactory redisConnectionFactory, BloomFilterSerializer bloomFilterSerializer, Hasher hasher) {
+    public static <T> RedisBloomFilter<T> create(String name, long expectedInsertions, double fpp, RedisConnectionFactory redisConnectionFactory, BloomFilterSerializer bloomFilterSerializer, Hasher hasher) {
         if (expectedInsertions <= 0) {
             throw new IllegalArgumentException(String.format("expectedInsertions (%s) must be > 0", expectedInsertions));
         }
@@ -33,7 +35,7 @@ public class RedisBloomFilter<T> extends BloomFilter<T> {
         }
         long numBits = optimalNumOfBits(expectedInsertions, fpp);
         int numHashFunctions = optimalNumOfHashFunctions(expectedInsertions, numBits);
-        return new RedisBloomFilter<T>(numHashFunctions, new RedisBitSet(numBits, redisConnectionFactory), bloomFilterSerializer, hasher);
+        return new RedisBloomFilter<T>(numHashFunctions, new RedisBitSet(numBits, name, redisConnectionFactory), bloomFilterSerializer, hasher);
     }
 
 }
