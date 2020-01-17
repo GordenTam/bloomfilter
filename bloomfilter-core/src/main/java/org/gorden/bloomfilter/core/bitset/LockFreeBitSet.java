@@ -85,4 +85,12 @@ public class LockFreeBitSet implements BitSet {
             return increment ? div + (long)signum : div;
         }
     }
+
+    public void clear(int bitIndex){}
+
+    public void clear(int fromIndex, int toIndex){}
+
+    public void clear(){
+
+    }
 }

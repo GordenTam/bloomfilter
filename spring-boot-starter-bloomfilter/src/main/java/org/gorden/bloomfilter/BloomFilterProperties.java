@@ -1,6 +1,5 @@
 package org.gorden.bloomfilter;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +7,6 @@ import java.util.List;
  * @author: GordenTam
  * @create: 2019-12-18
  **/
-@ConfigurationProperties(prefix = "bloom-filter")
 public class BloomFilterProperties {
 
     private BloomFilterType type;

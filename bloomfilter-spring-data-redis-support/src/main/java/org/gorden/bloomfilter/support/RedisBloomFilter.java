@@ -1,25 +1,27 @@
-package org.gorden.bloomfilter.core.concurrent;
+package org.gorden.bloomfilter.support;
 
 import org.gorden.bloomfilter.core.BloomFilter;
 import org.gorden.bloomfilter.core.bitset.BitSet;
 import org.gorden.bloomfilter.core.bitset.LockFreeBitSet;
+import org.gorden.bloomfilter.core.concurrent.ConcurrentBloomFilter;
 import org.gorden.bloomfilter.core.hash.Hasher;
 import org.gorden.bloomfilter.core.hash.Murmur3_128Hasher;
 import org.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
 import org.gorden.bloomfilter.core.serializer.JdkSerializationBloomFilterSerializer;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
 
 /**
  * @author: GordenTam
- * @create: 2020-01-15
+ * @create: 2020-01-16
  **/
 
-public class ConcurrentBloomFilter<T> extends BloomFilter<T> {
+public class RedisBloomFilter<T> extends BloomFilter<T> {
 
-    private ConcurrentBloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, Hasher hasher) {
+    private RedisBloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, Hasher hasher) {
         super(numHashFunctions, bitSet, bloomFilterSerializer, hasher);
     }
 
-    public static <T> ConcurrentBloomFilter<T> create(long expectedInsertions, double fpp) {
+    public static <T> RedisBloomFilter<T> create(long expectedInsertions, double fpp, RedisConnectionFactory redisConnectionFactory, BloomFilterSerializer bloomFilterSerializer, Hasher hasher) {
         if (expectedInsertions <= 0) {
             throw new IllegalArgumentException(String.format("expectedInsertions (%s) must be > 0", expectedInsertions));
         }
@@ -31,7 +33,7 @@ public class ConcurrentBloomFilter<T> extends BloomFilter<T> {
         }
         long numBits = optimalNumOfBits(expectedInsertions, fpp);
         int numHashFunctions = optimalNumOfHashFunctions(expectedInsertions, numBits);
-        return new ConcurrentBloomFilter<T>(numHashFunctions, new LockFreeBitSet(numBits), new JdkSerializationBloomFilterSerializer(), new Murmur3_128Hasher(0));
+        return new RedisBloomFilter<T>(numHashFunctions, new RedisBitSet(numBits, redisConnectionFactory), bloomFilterSerializer, hasher);
     }
 
 }

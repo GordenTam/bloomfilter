@@ -17,8 +17,10 @@ public interface BitSet {
     long bitSize();
 
     /**
-     * bit set used bit
+     * bit num of 1
      */
     long bitCount();
+
+    void clear();
 
 }

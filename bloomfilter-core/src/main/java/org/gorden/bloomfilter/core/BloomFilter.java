@@ -12,7 +12,7 @@ import java.math.RoundingMode;
  *
  * @author GordenTam
  */
-public class BloomFilter<T> implements Membership<T> {
+public abstract class BloomFilter<T> implements Membership<T> {
 
     private int numHashFunctions;
 
@@ -22,29 +22,7 @@ public class BloomFilter<T> implements Membership<T> {
 
     private BitSet bitSet;
 
-    public BloomFilter(long expectedInsertions, double fpp) {
-        this(expectedInsertions, fpp);
-    }
-
-    public BloomFilter(long expectedInsertions, double fpp, BloomFilterSerializer bloomFilterSerializer, Hasher hasher) {
-        if (expectedInsertions <= 0) {
-            throw new IllegalArgumentException(String.format("expectedInsertions (%s) must be > 0", expectedInsertions));
-        }
-        if (fpp >= 1.0) {
-            throw new IllegalArgumentException(String.format("numHashFunctions (%s) must be < 1.0", fpp));
-        }
-        if (fpp <= 0.0) {
-            throw new IllegalArgumentException(String.format("numHashFunctions (%s) must be > 0.0", fpp));
-        }
-        long numBits = optimalNumOfBits(expectedInsertions, fpp);
-        int numHashFunctions = optimalNumOfHashFunctions(expectedInsertions, numBits);
-        this(numHashFunctions, bloomFilterSerializer, hasher);
-    }
-
-    private BloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, Hasher hasher) {
-        if (bitSet == null || bloomFilterSerializer == null || hasher == null) {
-            throw new NullPointerException();
-        }
+    protected BloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, Hasher hasher) {
         this.numHashFunctions = numHashFunctions;
         this.bitSet = bitSet;
         this.bloomFilterSerializer = bloomFilterSerializer;
@@ -106,11 +84,11 @@ public class BloomFilter<T> implements Membership<T> {
         return bitSet.bitSize();
     }
 
-    private int optimalNumOfHashFunctions(long n, long m) {
+    protected static int optimalNumOfHashFunctions(long n, long m) {
         return Math.max(1, (int) Math.round((double) m / n * Math.log(2)));
     }
 
-    private long optimalNumOfBits(long n, double p) {
+    protected static long optimalNumOfBits(long n, double p) {
         if (p == 0) {
             p = Double.MIN_VALUE;
         }
@@ -129,5 +107,9 @@ public class BloomFilter<T> implements Membership<T> {
     private long upperEight(byte[] bytes) {
         return Longs.fromBytes(
                 bytes[15], bytes[14], bytes[13], bytes[12], bytes[11], bytes[10], bytes[9], bytes[8]);
+    }
+
+    public void clear(){
+        this.bitSet.clear();
     }
 }

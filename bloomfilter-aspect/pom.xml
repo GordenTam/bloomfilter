@@ -10,9 +10,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>bloomfilter-aop</artifactId>
+    <artifactId>bloomfilter-aspect</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>bloomfilter-aop</name>
+    <name>bloomfilter-aspect</name>
     <description>aspect for bloomfilter</description>
 
     <properties>

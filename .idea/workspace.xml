@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb626e56-b1e2-4453-a1df-47828950995d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="53210b2a-f487-4cca-bec0-e0060a1ab464" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-aspect/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-aspect/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilters.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/JdkBloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/concurrent/JdkBloomFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/hash/Murmur3_128Hasher.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/hash/Murmur3_128Hasher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/BitSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/BitSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/LockFreeBitSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/LockFreeBitSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/concurrent/ConcurrentBloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/concurrent/ConcurrentBloomFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/main/java/org/gorden/bloomfilter/support/RedisBitSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/main/java/org/gorden/bloomfilter/support/RedisBitSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/main/java/org/gorden/bloomfilter/support/RedisBloomFilter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/bloomfilter-core/target/" />
-    <ignored path="$PROJECT_DIR$/bloomfilter-redis/target/" />
-    <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/bloomfilter-aspect/target/" />
-    <ignored path="$PROJECT_DIR$/bloomfilter-support/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/spring-boot-starter-bloomfilter/target/" />
     <ignored path="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,47 +32,69 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/LockFreeBitSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/hash/Murmur3_128Hasher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="-429">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/serializer/FastJsonBloomFilterSerializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bloomfilter-aspect/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="768">
+              <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/BitSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/concurrent/ConcurrentBloomFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/main/java/org/gorden/bloomfilter/support/RedisBitSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1247">
+              <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
               <folding>
-                <element signature="e#607#608#0" expanded="true" />
-                <element signature="e#633#634#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Documents/jdk1.8.0_191/src.zip!/java/nio/ByteBuffer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="262" column="15" selection-start-line="262" selection-start-column="15" selection-end-line="262" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Documents/jdk1.8.0_191/src.zip!/java/nio/Buffer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7199">
-              <caret line="464" column="26" selection-start-line="464" selection-start-column="20" selection-end-line="464" selection-end-column="26" />
-              <folding>
-                <element signature="e#12171#12172#0" expanded="true" />
-                <element signature="e#12210#12211#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Documents/jdk1.8.0_191/src.zip!/java/nio/HeapByteBuffer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -79,86 +102,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#828#829#0" expanded="true" />
-                <element signature="e#875#876#0" expanded="true" />
-                <element signature="e#5040#5041#0" expanded="true" />
-                <element signature="e#5129#5130#0" expanded="true" />
-                <element signature="e#5889#5890#0" expanded="true" />
-                <element signature="e#5952#5953#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/Membership.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="23" selection-start-column="23" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/concurrent/JdkBloomFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/concurrent/ConcurrentBloomFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/main/java/org/gorden/bloomfilter/support/RedisBitSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="12" column="63" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="176">
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>checkArgument</find>
-      <find>Murmur3_128Hasher</find>
-      <find>hashBytes</find>
-      <find>mixK1</find>
-      <find>DoubleMath</find>
-      <find>seed</find>
-      <find>numHashFunctions</find>
-      <find>offset</find>
-      <find>bitSetStrategy</find>
-      <find>5545529020109919103L</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -166,32 +116,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/annotation/BFMightContain.aj" />
-        <option value="$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/aspect/BloomFilterAspect.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-support/pom.xml" />
-        <option value="$PROJECT_DIR$/bloomfilter-support/src/main/java/org/gorden/bloomfilter/support/RedisBitSet.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/LockFreeBitSet.java" />
-        <option value="$PROJECT_DIR$/spring-boot-starter-bloomfilter/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/BloomFilterProperties.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/DefaultBloomFilter.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/serializer/BloomFilterSerializer.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/serializer/JdkSerializationBloomFilterSerializer.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/AbstractBloomFilter.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/Membership.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/pom.xml" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/LockFreeBitSet.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/hash/Hasher.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/JdkBloomFilter.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/serializer/FastJsonBloomFilterSerializer.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/main/java/org/gorden/bloomfilter/support/RedisBloomFilter.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/hash/Longs.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/pom.xml" />
+        <option value="$PROJECT_DIR$/bloomfilter-aspect/pom.xml" />
+        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/BitSet.java" />
         <option value="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/main/java/org/gorden/bloomfilter/support/RedisBitSet.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilters.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/concurrent/ConcurrentBloomFilter.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/hash/Murmur3_128Hasher.java" />
-        <option value="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilter.java" />
       </list>
     </option>
   </component>
@@ -216,67 +143,7 @@
             <path>
               <item name="bloom-filter" type="b2602c69:ProjectViewProjectNode" />
               <item name="bloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="bloomfilter-core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bloom-filter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="bloomfilter-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bloom-filter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="bloomfilter-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bloom-filter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="bloomfilter-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bloom-filter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="bloomfilter-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bloom-filter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="bloomfilter-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bloom-filter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="bloomfilter-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="hash" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bloom-filter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bloomfilter" type="462c0819:PsiDirectoryNode" />
-              <item name="bloomfilter-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="serializer" type="462c0819:PsiDirectoryNode" />
+              <item name="bloomfilter-aspect" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bloom-filter" type="b2602c69:ProjectViewProjectNode" />
@@ -313,6 +180,36 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="support" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="bloom-filter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="bloom-filter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.data:spring-data-redis:2.1.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="bloom-filter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.data:spring-data-redis:2.1.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-data-redis-2.1.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloom-filter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.data:spring-data-redis:2.1.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-data-redis-2.1.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="redis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloom-filter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.data:spring-data-redis:2.1.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-data-redis-2.1.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="redis" type="462c0819:PsiDirectoryNode" />
+              <item name="connection" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -324,22 +221,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/bloomfilter-support/src/main/java/org/gorden/bloomfilter/support" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.gorden.bloomfilter.core.serializer" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/bloomfilter-support/src/main/java/org/gorden/bloomfilter/support" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -358,30 +244,34 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fb626e56-b1e2-4453-a1df-47828950995d" name="Default Changelist" comment="" />
-      <created>1578558124820</created>
+      <changelist id="53210b2a-f487-4cca-bec0-e0060a1ab464" name="Default Changelist" comment="" />
+      <created>1579249188596</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1578558124820</updated>
-      <workItem from="1578558128324" duration="48843000" />
-      <workItem from="1578896214237" duration="36202000" />
+      <updated>1579249188596</updated>
+      <workItem from="1579249193099" duration="5370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85045000" />
+    <option name="totallyTimeSpent" value="5370000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="3536" height="1913" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15366973" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -389,454 +279,100 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Spring" order="9" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.14785554" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/annotation/BFMightContain.aj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/aspect/BloomFilterAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/support/RedisBitMaps.java" />
-    <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/BloomFilterAutoConfigration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/BloomFilterProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/support/BloomFilterConfigurationSelector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Documents/jdk1.8.0_191/src.zip!/java/util/concurrent/atomic/AtomicLongArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="79" column="11" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
-          <folding>
-            <element signature="e#1806#1807#0" expanded="true" />
-            <element signature="e#1846#1847#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/math/LongMath.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="913">
-          <caret line="237" column="5" lean-forward="true" selection-start-line="196" selection-start-column="4" selection-end-line="237" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/primitives/Ints.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="37" column="22" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="37" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/base/Preconditions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/hash/Hasher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/hash/HashCode.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/hash/Hasher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/math/DoubleMath.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.60/fastjson-1.2.60.jar!/com/alibaba/fastjson/JSON.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="376" column="24" selection-start-line="376" selection-start-column="24" selection-end-line="376" selection-end-column="24" />
-          <folding>
-            <element signature="e#15485#15486#0" expanded="true" />
-            <element signature="e#15532#15533#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/serializer/FastJsonBloomFilterSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/hash/MacHashFunction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/hash/Hashing.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/hash/HashFunction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilterStrategies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="87" column="43" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/hash/Murmur3_32HashFunction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="72" column="9" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/LockFreeBitSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/hash/AbstractStreamingHashFunction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2257">
-          <caret line="137" column="9" selection-start-line="137" selection-start-column="9" selection-end-line="137" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/hash/Murmur3_128HashFunction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="86" column="65" selection-start-line="86" selection-start-column="65" selection-end-line="86" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Documents/jdk1.8.0_191/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/BitSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/hash/BloomFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2467">
-          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/primitives/Longs.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="174" selection-start-line="174" selection-end-line="176" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/21.0/guava-21.0.jar!/com/google/common/hash/BloomFilterStrategies.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/serializer/JdkSerializationBloomFilterSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/hash/Longs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-spring-data-redis-support/pom.xml">
+    <entry file="file://$PROJECT_DIR$/bloomfilter-aspect/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/main/java/org/gorden/bloomfilter/support/RedisBloomFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/serializer/SerializationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/serializer/BloomFilterSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="51" lean-forward="true" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/concurrent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/main/java/org/gorden/bloomfilter/support/RedisBitSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="63" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/Membership.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/concurrent/JdkBloomFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Documents/jdk1.8.0_191/src.zip!/java/lang/IndexOutOfBoundsException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="44" column="11" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
-          <folding>
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Documents/jdk1.8.0_191/src.zip!/java/nio/ByteBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="262" column="15" selection-start-line="262" selection-start-column="15" selection-end-line="262" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Documents/jdk1.8.0_191/src.zip!/java/nio/HeapByteBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Documents/jdk1.8.0_191/src.zip!/java/nio/Buffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7199">
-          <caret line="464" column="26" selection-start-line="464" selection-start-column="20" selection-end-line="464" selection-end-column="26" />
-          <folding>
-            <element signature="e#12171#12172#0" expanded="true" />
-            <element signature="e#12210#12211#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/hash/Murmur3_128Hasher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#633#634#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="768">
+          <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
-            <element signature="e#875#876#0" expanded="true" />
-            <element signature="e#5040#5041#0" expanded="true" />
-            <element signature="e#5129#5130#0" expanded="true" />
-            <element signature="e#5889#5890#0" expanded="true" />
-            <element signature="e#5952#5953#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="176">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilters.java">
+    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/LockFreeBitSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        <state relative-caret-position="105">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/hash/Murmur3_128Hasher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-429">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/serializer/FastJsonBloomFilterSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/concurrent/ConcurrentBloomFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="252">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/BitSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Documents/jdk1.8.0_191/src.zip!/java/util/function/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.1.2.RELEASE/spring-data-redis-2.1.2.RELEASE.jar!/org/springframework/data/redis/connection/RedisStringCommands.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/main/java/org/gorden/bloomfilter/support/RedisBitSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1247">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
           <splitter-proportions>
@@ -854,19 +390,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>bloomfilter-core</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

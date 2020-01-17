@@ -26,8 +26,8 @@ public class BloomFilterAspect {
         Method method = null;
         if (joinPoint.getSignature() instanceof MethodSignature) {
             MethodSignature signature = (MethodSignature)joinPoint.getSignature();
-            method = getDeclaredMethod(joinPoint.getTarget().getClass(), signature.getName(), getParameterTypes(joinPoint));
         }
+        return null;
     }
 
 
