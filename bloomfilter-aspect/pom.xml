@@ -17,8 +17,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <aspectj.version>1.9.2</aspectj.version>
-        <bloomfilter-core.version>1.0.0-SNAPSHOT</bloomfilter-core.version>
+        <aspectj.version>1.5.4</aspectj.version>
     </properties>
 
     <dependencies>
@@ -26,7 +25,7 @@
         <dependency>
             <groupId>org.gorden.bloomfilter</groupId>
             <artifactId>bloomfilter-core</artifactId>
-            <version>${bloomfilter-core.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>

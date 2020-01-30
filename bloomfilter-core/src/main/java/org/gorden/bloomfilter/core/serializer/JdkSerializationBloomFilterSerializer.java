@@ -3,8 +3,7 @@ package org.gorden.bloomfilter.core.serializer;
 import java.io.*;
 
 /**
- * @author: GordenTam
- * @create: 2020-01-10
+ * @author GordenTam
  **/
 
 public class JdkSerializationBloomFilterSerializer implements BloomFilterSerializer<Object>{

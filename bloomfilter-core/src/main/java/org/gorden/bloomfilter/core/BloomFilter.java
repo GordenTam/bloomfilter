@@ -1,11 +1,9 @@
 package org.gorden.bloomfilter.core;
 
-import com.google.common.math.DoubleMath;
 import org.gorden.bloomfilter.core.bitset.BitSet;
-import org.gorden.bloomfilter.core.hash.Hasher;
+import org.gorden.bloomfilter.core.hash.HashFunction;
 import org.gorden.bloomfilter.core.hash.Longs;
 import org.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
-import java.math.RoundingMode;
 
 /**
  * A Bloom filter implements refer to guava. Support optional bitSet, hashFunction and serializer implements.
@@ -18,20 +16,20 @@ public abstract class BloomFilter<T> implements Membership<T> {
 
     private BloomFilterSerializer bloomFilterSerializer;
 
-    private Hasher hasher;
+    private HashFunction hashFunction;
 
     private BitSet bitSet;
 
-    protected BloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, Hasher hasher) {
+    protected BloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, HashFunction hashFunction) {
         this.numHashFunctions = numHashFunctions;
         this.bitSet = bitSet;
         this.bloomFilterSerializer = bloomFilterSerializer;
-        this.hasher = hasher;
+        this.hashFunction = hashFunction;
     }
 
     public boolean mightContain(T object) {
         long bitSize = bitSet.bitSize();
-        byte[] bytes = hasher.hashBytes(raw(object));
+        byte[] bytes = hashFunction.hashBytes(raw(object));
         long hash1 = lowerEight(bytes);
         long hash2 = upperEight(bytes);
 
@@ -48,7 +46,7 @@ public abstract class BloomFilter<T> implements Membership<T> {
     public boolean put(T object) {
         long bitSize = bitSet.bitSize();
         //使用murmurHash求得128位byte数组
-        byte[] bytes = hasher.hashBytes(raw(object));
+        byte[] bytes = hashFunction.hashBytes(raw(object));
         //低64位
         long hash1 = lowerEight(bytes);
         //高64位
@@ -77,10 +75,10 @@ public abstract class BloomFilter<T> implements Membership<T> {
         long bitCount = bitSet.bitCount();
 
         double fractionOfBitsSet = (double) bitCount / bitSize;
-        return DoubleMath.roundToLong(-Math.log1p(-fractionOfBitsSet) * bitSize / numHashFunctions, RoundingMode.HALF_UP);
+        return Longs.doubleToLong(-Math.log1p(-fractionOfBitsSet) * bitSize / numHashFunctions);
     }
 
-    long bitSize() {
+    private long bitSize() {
         return bitSet.bitSize();
     }
 

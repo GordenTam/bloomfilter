@@ -1,8 +1,7 @@
 package org.gorden.bloomfilter.core.serializer;
 
 /**
- * @author: GordenTam
- * @create: 2019-12-18
+ * @author GordenTam
  **/
 
 public class SerializationException extends RuntimeException{

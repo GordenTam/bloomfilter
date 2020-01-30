@@ -1,8 +1,9 @@
 package org.gorden.bloomfilter.core.hash;
 
+import java.math.BigDecimal;
+
 /**
- * @author: GordenTam
- * @create: 2020-01-15
+ * @author GordenTam
  **/
 
 public class Longs {
@@ -20,7 +21,7 @@ public class Longs {
     }
 
     public static byte[] toByteArray(long x) {
-        byte[] bytes = new byte[18];
+        byte[] bytes = new byte[8];
         int index = 0;
         bytes[index + 7] = (byte) (x >> 56);
         bytes[index + 6] = (byte) (x >> 48);
@@ -35,5 +36,10 @@ public class Longs {
 
     public static long fromBytes(byte b1, byte b2, byte b3, byte b4, byte b5, byte b6, byte b7, byte b8) {
         return ((long)b1 & 255L) << 56 | ((long)b2 & 255L) << 48 | ((long)b3 & 255L) << 40 | ((long)b4 & 255L) << 32 | ((long)b5 & 255L) << 24 | ((long)b6 & 255L) << 16 | ((long)b7 & 255L) << 8 | (long)b8 & 255L;
+    }
+
+    public static long doubleToLong(double x) {
+        BigDecimal bigDecimal = BigDecimal.valueOf(x);
+        return bigDecimal.longValue();
     }
 }

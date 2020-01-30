@@ -1,8 +1,7 @@
 package org.gorden.bloomfilter.core.bitset;
 
 /**
- * @author: GordenTam
- * @create: 2019-12-17
+ * @author GordenTam
  **/
 
 public interface BitSet {

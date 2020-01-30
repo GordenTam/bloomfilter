@@ -1,6 +1,5 @@
 package org.gorden.bloomfilter.core.bitset;
 
-import com.google.common.primitives.Ints;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicLongArray;
 
@@ -23,8 +22,9 @@ public class LockFreeBitSet implements BitSet {
         if((long)numberOfLongIntValue != numberOfLong){
             throw new IllegalArgumentException(String.format("Out of range: %s", numberOfLong));
         }
-        this.data = new AtomicLongArray(Ints.checkedCast(this.divide(bits, 64)));
+        this.data = new AtomicLongArray(numberOfLongIntValue);
         this.bitCount = new AtomicLong(0);
+
     }
 
     public LockFreeBitSet(long[] data) {

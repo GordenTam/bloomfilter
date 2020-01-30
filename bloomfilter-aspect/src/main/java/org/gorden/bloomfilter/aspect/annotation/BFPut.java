@@ -8,6 +8,6 @@ import java.lang.annotation.*;
 @Documented
 public @interface BFPut {
 
-    String name() default "";
+    String name();
 
 }

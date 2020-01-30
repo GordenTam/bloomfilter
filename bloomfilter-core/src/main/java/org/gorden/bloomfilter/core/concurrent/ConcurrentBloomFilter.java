@@ -3,23 +3,35 @@ package org.gorden.bloomfilter.core.concurrent;
 import org.gorden.bloomfilter.core.BloomFilter;
 import org.gorden.bloomfilter.core.bitset.BitSet;
 import org.gorden.bloomfilter.core.bitset.LockFreeBitSet;
-import org.gorden.bloomfilter.core.hash.Hasher;
-import org.gorden.bloomfilter.core.hash.Murmur3_128Hasher;
+import org.gorden.bloomfilter.core.hash.HashFunction;
+import org.gorden.bloomfilter.core.hash.Murmur3_128HashFunction;
 import org.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
 import org.gorden.bloomfilter.core.serializer.JdkSerializationBloomFilterSerializer;
 
 /**
- * @author: GordenTam
- * @create: 2020-01-15
+ * In memory bloom filter
+ * @author GordenTam
  **/
 
 public class ConcurrentBloomFilter<T> extends BloomFilter<T> {
 
-    private ConcurrentBloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, Hasher hasher) {
-        super(numHashFunctions, bitSet, bloomFilterSerializer, hasher);
+    private ConcurrentBloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, HashFunction hashFunction) {
+        super(numHashFunctions, bitSet, bloomFilterSerializer, hashFunction);
     }
 
     public static <T> ConcurrentBloomFilter<T> create(long expectedInsertions, double fpp) {
+        return create(expectedInsertions, fpp, new JdkSerializationBloomFilterSerializer(), new Murmur3_128HashFunction(0));
+    }
+
+    public static <T> ConcurrentBloomFilter<T> create(long expectedInsertions, double fpp, BloomFilterSerializer bloomFilterSerializer) {
+        return create(expectedInsertions, fpp, bloomFilterSerializer, new Murmur3_128HashFunction(0));
+    }
+
+    public static <T> ConcurrentBloomFilter<T> create(long expectedInsertions, double fpp, HashFunction hashFunction) {
+        return create(expectedInsertions, fpp, new JdkSerializationBloomFilterSerializer(), hashFunction);
+    }
+
+    public static <T> ConcurrentBloomFilter<T> create(long expectedInsertions, double fpp, BloomFilterSerializer bloomFilterSerializer, HashFunction hashFunction) {
         if (expectedInsertions <= 0) {
             throw new IllegalArgumentException(String.format("expectedInsertions (%s) must be > 0", expectedInsertions));
         }
@@ -31,7 +43,7 @@ public class ConcurrentBloomFilter<T> extends BloomFilter<T> {
         }
         long numBits = optimalNumOfBits(expectedInsertions, fpp);
         int numHashFunctions = optimalNumOfHashFunctions(expectedInsertions, numBits);
-        return new ConcurrentBloomFilter<T>(numHashFunctions, new LockFreeBitSet(numBits), new JdkSerializationBloomFilterSerializer(), new Murmur3_128Hasher(0));
+        return new ConcurrentBloomFilter<T>(numHashFunctions, new LockFreeBitSet(numBits), bloomFilterSerializer, hashFunction);
     }
 
 }
