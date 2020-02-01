@@ -3,6 +3,8 @@ package org.gorden.bloomfilter.core.bitset;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicLongArray;
 
+import static org.gorden.bloomfilter.core.hash.Longs.divideCeiling;
+
 /**
  * @author GordenTam
  */
@@ -17,7 +19,7 @@ public class LockFreeBitSet implements BitSet {
             throw new IllegalArgumentException("data length is zero!");
         }
 
-        long numberOfLong = this.divide(bits, 64);
+        long numberOfLong = divideCeiling(bits, 64);
         int numberOfLongIntValue = (int)numberOfLong;
         if((long)numberOfLongIntValue != numberOfLong){
             throw new IllegalArgumentException(String.format("Out of range: %s", numberOfLong));
@@ -72,18 +74,6 @@ public class LockFreeBitSet implements BitSet {
 
     public long bitCount() {
         return bitCount.get();
-    }
-
-    private long divide(long p, long q) {
-        long div = p / q;
-        long rem = p - q * div;
-        if (rem == 0L) {
-            return div;
-        } else {
-            int signum = 1 | (int)((p ^ q) >> 63);
-            boolean increment = signum > 0;;
-            return increment ? div + (long)signum : div;
-        }
     }
 
     public void clear(int bitIndex){}

@@ -7,20 +7,16 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.gorden.bloomfilter.aspect.annotation.BFPut;
-import org.gorden.bloomfilter.aspect.annotation.BloomFilterType;
-import org.gorden.bloomfilter.core.BloomFilter;
-
-import java.lang.reflect.Method;
+import org.gorden.bloomfilter.core.AbstractBloomFilter;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author: GordenTam
- * @create: 2019-12-30
+ * @author GordenTam
  **/
 @Aspect
 public class BloomFilterAspect {
 
-    private final static ConcurrentHashMap<String, BloomFilter> BloomFilterCache = new ConcurrentHashMap<>(32);
+    private final static ConcurrentHashMap<String, AbstractBloomFilter> BloomFilterCache = new ConcurrentHashMap<>(32);
 
     @Pointcut("@annotation(org.gorden.bloomfilter.aspect.annotation.BFPut)")
     public void pointcut1(){}
@@ -37,7 +33,7 @@ public class BloomFilterAspect {
         //MethodSignature methodSignature = (MethodSignature)signature;
         String name = bfput.name();
         Object returnObject = joinPoint.proceed();
-        BloomFilter bf = BloomFilterCache.get(name);
+        AbstractBloomFilter bf = BloomFilterCache.get(name);
         bf.put(returnObject);
         return returnObject;
     }

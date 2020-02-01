@@ -1,17 +1,14 @@
-package org.gorden.bloomfilter.support;
+package org.gorden.bloomfilter.core;
 
-import org.gorden.bloomfilter.core.BloomFilter;
 import org.gorden.bloomfilter.core.bitset.BitSet;
 import org.gorden.bloomfilter.core.hash.HashFunction;
 import org.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
-import org.springframework.data.redis.connection.RedisConnectionFactory;
 
 /**
- * @author: GordenTam
- * @create: 2020-01-16
+ * @author GordenTam
  **/
 
-public class RedisBloomFilter<T> extends BloomFilter<T> {
+public class RedisBloomFilter<T> extends AbstractBloomFilter<T> {
 
     private String name;
 

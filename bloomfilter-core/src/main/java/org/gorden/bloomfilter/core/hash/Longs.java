@@ -42,4 +42,16 @@ public class Longs {
         BigDecimal bigDecimal = BigDecimal.valueOf(x);
         return bigDecimal.longValue();
     }
+
+    public static long divideCeiling(long p, long q) {
+        long div = p / q;
+        long rem = p - q * div;
+        if (rem == 0L) {
+            return div;
+        } else {
+            int signum = 1 | (int)((p ^ q) >> 63);
+            boolean increment = signum > 0;
+            return increment ? div + (long)signum : div;
+        }
+    }
 }

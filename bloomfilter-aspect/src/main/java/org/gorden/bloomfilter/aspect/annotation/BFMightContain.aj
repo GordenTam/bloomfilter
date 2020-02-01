@@ -10,4 +10,6 @@ public @interface BFMightContain {
 
     String name();
 
+    String manager();
+
 }
