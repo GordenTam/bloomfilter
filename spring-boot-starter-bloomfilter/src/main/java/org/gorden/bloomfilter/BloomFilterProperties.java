@@ -36,11 +36,11 @@ public class BloomFilterProperties {
         this.names = names;
     }
 
-    public long getExpectedInsertions(){
+    public long getExpectedInsertions() {
         return this.expectedInsertions;
     }
 
-    public void setExpectedInsertions(long expectedInsertions){
+    public void setExpectedInsertions(long expectedInsertions) {
         this.expectedInsertions = expectedInsertions;
     }
 
@@ -55,6 +55,8 @@ public class BloomFilterProperties {
     public enum BloomFilterType {
         GENERIC,
         REDIS;
-        private BloomFilterType() {}
+
+        private BloomFilterType() {
+        }
     }
 }

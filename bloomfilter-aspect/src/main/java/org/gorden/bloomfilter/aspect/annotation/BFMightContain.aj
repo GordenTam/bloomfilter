@@ -8,8 +8,8 @@ import java.lang.annotation.*;
 @Documented
 public @interface BFMightContain {
 
-    String name();
+    String value();
 
-    String manager();
+    String fallback() default "";
 
 }

@@ -7,8 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="bloomfilter-aspect" />
-        <module name="bloomfilter-core" />
+        <module name="bloomfilter-examples" />
         <module name="bloomfilter-spring-data-redis-support" />
+        <module name="bloomfilter-core" />
         <module name="spring-boot-starter-bloomfilter" />
       </profile>
     </annotationProcessing>
