@@ -1,12 +1,14 @@
 package org.gorden.bloomfilter;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author: GordenTam
- * @create: 2019-12-18
+ * @author GordenTam
  **/
+@ConfigurationProperties(prefix = "bloomfilter")
 public class BloomFilterProperties {
 
     private BloomFilterType type;
@@ -53,7 +55,7 @@ public class BloomFilterProperties {
     }
 
     public enum BloomFilterType {
-        GENERIC,
+        JDK,
         REDIS;
 
         private BloomFilterType() {

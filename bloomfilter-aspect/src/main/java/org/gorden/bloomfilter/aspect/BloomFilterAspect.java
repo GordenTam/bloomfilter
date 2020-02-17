@@ -1,4 +1,4 @@
-package org.gorden.bloomfilter.aspect.aspect;
+package org.gorden.bloomfilter.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -6,8 +6,6 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.gorden.bloomfilter.aspect.annotation.BFMightContain;
-import org.gorden.bloomfilter.aspect.annotation.BFPut;
 import org.gorden.bloomfilter.examples.BloomFilter;
 import org.gorden.bloomfilter.examples.observer.BloomFilterObserver;
 
@@ -27,13 +25,15 @@ public class BloomFilterAspect {
     public void pointcut2() {
     }
 
-    @Around("pointcut1() && @annotation(bfput)")
-    public Object methodsAnnotatedWithBloomFilter(ProceedingJoinPoint joinPoint, BFPut bfput) throws Throwable {
+    @Around("pointcut1()")
+    public Object methodsAnnotatedWithBFPut(ProceedingJoinPoint joinPoint) throws Throwable {
         Signature signature = joinPoint.getSignature();
         if (!(signature instanceof MethodSignature)) {
             throw new IllegalArgumentException("the annotation can only be used in methods");
         }
-        //MethodSignature methodSignature = (MethodSignature)signature;
+        MethodSignature methodSignature = (MethodSignature)signature;
+        Method method = methodSignature.getMethod();
+        org.gorden.bloomfilter.aspect.annotation.BFPut bfput = method.getAnnotation(org.gorden.bloomfilter.aspect.annotation.BFPut.class);
         String name = bfput.value();
         Object returnObject = joinPoint.proceed();
         BloomFilter bf = BloomFilterObserver.getBloomFilter(name);
@@ -41,13 +41,15 @@ public class BloomFilterAspect {
         return returnObject;
     }
 
-    @Around("pointcut2() && @annotation(bfMightContain)")
-    public Object methodsAnnotatedWithBloomFilter(ProceedingJoinPoint joinPoint, BFMightContain bfMightContain) throws Throwable {
+    @Around("pointcut2()")
+    public Object methodsAnnotatedWithBFMightContain(ProceedingJoinPoint joinPoint) throws Throwable {
         Signature signature = joinPoint.getSignature();
         if (!(signature instanceof MethodSignature)) {
             throw new IllegalArgumentException("the annotation can only be used in methods");
         }
         MethodSignature methodSignature = (MethodSignature)signature;
+        Method method = methodSignature.getMethod();
+        org.gorden.bloomfilter.aspect.annotation.BFMightContain bfMightContain = method.getAnnotation(org.gorden.bloomfilter.aspect.annotation.BFMightContain.class);
         String name = bfMightContain.value();
         Object returnObject = joinPoint.proceed();
         BloomFilter bf = BloomFilterObserver.getBloomFilter(name);

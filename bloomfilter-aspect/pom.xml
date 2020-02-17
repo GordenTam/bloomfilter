@@ -4,10 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.gorden.bloomfilter</groupId>
+        <groupId>cn.gorden</groupId>
         <artifactId>bloom-filter</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>bloomfilter-aspect</artifactId>
@@ -17,14 +16,15 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <aspectj.version>1.5.4</aspectj.version>
+        <aspectj.version>1.9.4</aspectj.version>
     </properties>
 
     <dependencies>
 
         <dependency>
-            <groupId>org.gorden.bloomfilter</groupId>
+            <groupId>cn.gorden</groupId>
             <artifactId>bloomfilter-core</artifactId>
+            <version>${version}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -41,5 +41,29 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>aspectj-maven-plugin</artifactId>
+                    <version>1.9.4</version>
+                    <configuration>
+                        <complianceLevel>1.8</complianceLevel>
+                        <source>1.8</source>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>compile</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
 
 </project>

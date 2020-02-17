@@ -1,13 +1,6 @@
 package org.gorden.bloomfilter.support;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class RedisApplicationTests {
-
-    @Test
-    void contextLoads() {
-    }
+import org.junit.Test;
+public class RedisApplicationTests {
 
 }

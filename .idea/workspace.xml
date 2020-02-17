@@ -2,50 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c4f95ed-a7da-497f-a352-0928c9053c2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/concurrent/AbstractBloomFilterManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/concurrent/ConcurrentBloomFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/WeavingMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/exception/FallbackDefinitionException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BloomFilter.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-aspect/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-aspect/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/annotation/BFMightContain.aj" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/annotation/BFMightContain.aj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-aspect/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-aspect/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/annotation/BFMightContain.aj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/annotation/BFPut.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/annotation/BFPut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/annotation/BloomFilterType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/aspect/BloomFilterAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/aspect/BloomFilterAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-aspect/src/test/java/org/gorden/bloomfilter/aspect/AopApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/AbstractBloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/AbstractBloomFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/BloomFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilterConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/BloomFilterConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/BloomFilterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/BloomFilterManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/RedisBloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/RedisBloomFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/RedisOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/RedisOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/BitSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/bitset/BitSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/LockFreeBitSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/bitset/LockFreeBitSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/bitset/RedisBitSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/bitset/RedisBitSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/concurrent/AbstractBloomFilterManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/concurrent/ConcurrentBloomFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/hash/HashFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/hash/HashFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/hash/Hasher.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/hash/Hasher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/hash/Longs.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/hash/Longs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/hash/Murmur3_128HashFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/hash/Murmur3_128HashFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/serializer/BloomFilterSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/serializer/BloomFilterSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/serializer/FastJsonBloomFilterSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/serializer/FastJsonBloomFilterSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/serializer/JdkSerializationBloomFilterSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/serializer/JdkSerializationBloomFilterSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/core/serializer/SerializationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/serializer/SerializationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/test/java/org/gorden/bloomfilter/core/ConcurrentBloomFilterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/test/java/org/gorden/bloomfilter/examples/ConcurrentBloomFilterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/test/java/org/gorden/bloomfilter/core/hash/Murmur3_128HashFunctionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/test/java/org/gorden/bloomfilter/examples/hash/Murmur3_128HashFunctionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/test/java/org/gorden/bloomfilter/core/serializer/FastJsonAbstractBloomFilterSerializerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/test/java/org/gorden/bloomfilter/examples/serializer/FastJsonAbstractBloomFilterSerializerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/test/java/org/gorden/bloomfilter/core/serializer/JdkSerializationAbstractBloomFilterSerializerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/test/java/org/gorden/bloomfilter/examples/serializer/JdkSerializationAbstractBloomFilterSerializerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/main/java/org/gorden/bloomfilter/support/SpringDataRedisOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/main/java/org/gorden/bloomfilter/support/SpringDataRedisOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/aspect/BloomFilterAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-aspect/src/main/java/org/gorden/bloomfilter/aspect/BloomFilterAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/main/java/org/gorden/bloomfilter/examples/BloomFilterManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-core/src/test/java/org/gorden/bloomfilter/examples/ConcurrentBloomFilterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-core/src/test/java/org/gorden/bloomfilter/examples/ConcurrentBloomFilterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-examples/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-examples/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-examples/src/main/java/org/gorden/bloomfilter/examples/BloomFilterExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-examples/src/main/java/org/gorden/bloomfilter/examples/ConcurrentBloomFilterExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/main/java/org/gorden/bloomfilter/support/RedisBloomFilterManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/test/java/org/gorden/bloomfilter/support/RedisApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/src/test/java/org/gorden/bloomfilter/support/RedisApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/BloomFilterAutoConfigration.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/BloomFilterAutoConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/BloomFilterProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/main/java/org/gorden/bloomfilter/BloomFilterProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/test/java/org/gorden/bloomfilter/WithSpringApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-starter-bloomfilter/src/test/java/org/gorden/bloomfilter/WithSpringApplicationTests.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,13 +40,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1Xf4SgNBpRRF1l3aycbOzQkwaej" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.gorden.bloomfilter.aspect" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.gorden.bloomfilter.aspect" />
+      <recent name="org.gorden.bloomfilter.aspect.exception" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\github\bloomfilter" />
     </key>
@@ -86,6 +81,43 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Application.ConcurrentBloomFilterExample">
+    <configuration name="ConcurrentBloomFilterExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.gorden.bloomfilter.examples.ConcurrentBloomFilterExample" />
+      <module name="bloomfilter-examples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.gorden.bloomfilter.examples.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConcurrentBloomFilterTest.mightContainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bloomfilter-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.gorden.bloomfilter.examples.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.gorden.bloomfilter.examples" />
+      <option name="MAIN_CLASS_NAME" value="org.gorden.bloomfilter.examples.ConcurrentBloomFilterTest" />
+      <option name="METHOD_NAME" value="mightContainTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ConcurrentBloomFilterExample" />
+        <item itemvalue="JUnit.ConcurrentBloomFilterTest.mightContainTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -97,7 +129,17 @@
       <option name="presentableId" value="Default" />
       <updated>1581423816694</updated>
       <workItem from="1581423819167" duration="2288000" />
-      <workItem from="1581479636641" duration="5044000" />
+      <workItem from="1581479636641" duration="8958000" />
+      <workItem from="1581489257810" duration="2443000" />
+      <workItem from="1581507978764" duration="599000" />
+      <workItem from="1581561605166" duration="2175000" />
+      <workItem from="1581609411170" duration="4529000" />
+      <workItem from="1581614079951" duration="1201000" />
+      <workItem from="1581615466994" duration="747000" />
+      <workItem from="1581616455617" duration="572000" />
+      <workItem from="1581652849958" duration="5267000" />
+      <workItem from="1581683324716" duration="2083000" />
+      <workItem from="1581858546926" duration="7322000" />
     </task>
     <servers />
   </component>

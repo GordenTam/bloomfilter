@@ -2,8 +2,8 @@ package org.gorden.bloomfilter.aspect.annotation;
 
 import java.lang.annotation.*;
 
-@Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
 @Inherited
 @Documented
 public @interface BFMightContain {

@@ -8,7 +8,7 @@
     <description>bloom filter core</description>
 
     <parent>
-        <groupId>org.gorden.bloomfilter</groupId>
+        <groupId>cn.gorden</groupId>
         <artifactId>bloom-filter</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
