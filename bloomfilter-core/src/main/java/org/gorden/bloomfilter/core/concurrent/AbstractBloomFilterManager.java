@@ -1,7 +1,7 @@
-package org.gorden.bloomfilter.examples.concurrent;
+package org.gorden.bloomfilter.core.concurrent;
 
 import org.checkerframework.checker.nullness.qual.Nullable;
-import org.gorden.bloomfilter.examples.BloomFilter;
+import org.gorden.bloomfilter.core.BloomFilter;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;

@@ -1,12 +1,9 @@
-package org.gorden.bloomfilter.examples;
+package org.gorden.bloomfilter.core;
 
-import org.gorden.bloomfilter.examples.bitset.BitSet;
-import org.gorden.bloomfilter.examples.hash.HashFunction;
-import org.gorden.bloomfilter.examples.hash.Longs;
-import org.gorden.bloomfilter.examples.serializer.BloomFilterSerializer;
-
-import java.util.Observable;
-import java.util.Observer;
+import org.gorden.bloomfilter.core.bitset.BitSet;
+import org.gorden.bloomfilter.core.hash.HashFunction;
+import org.gorden.bloomfilter.core.hash.Longs;
+import org.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
 
 /**
  * A Bloom filter implements refer to guava. Support optional bitSet, hashFunction and serializer implements.

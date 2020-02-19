@@ -1,4 +1,4 @@
-package org.gorden.bloomfilter.examples.serializer;
+package org.gorden.bloomfilter.core.serializer;
 
 import com.alibaba.fastjson.JSONObject;
 

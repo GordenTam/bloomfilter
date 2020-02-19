@@ -1,10 +1,10 @@
-package org.gorden.bloomfilter.examples;
+package org.gorden.bloomfilter.core;
 
-import org.gorden.bloomfilter.examples.bitset.BitSet;
-import org.gorden.bloomfilter.examples.bitset.RedisBitSet;
-import org.gorden.bloomfilter.examples.hash.HashFunction;
-import org.gorden.bloomfilter.examples.observer.BloomFilterObserver;
-import org.gorden.bloomfilter.examples.serializer.BloomFilterSerializer;
+import org.gorden.bloomfilter.core.bitset.BitSet;
+import org.gorden.bloomfilter.core.bitset.RedisBitSet;
+import org.gorden.bloomfilter.core.hash.HashFunction;
+import org.gorden.bloomfilter.core.observer.BloomFilterObserver;
+import org.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
 
 /**
  * @author GordenTam

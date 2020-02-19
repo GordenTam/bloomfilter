@@ -1,4 +1,4 @@
-package org.gorden.bloomfilter.examples;
+package org.gorden.bloomfilter.core;
 
 public interface RedisOperator {
 

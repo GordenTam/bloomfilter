@@ -1,14 +1,13 @@
-package org.gorden.bloomfilter.examples.concurrent;
+package org.gorden.bloomfilter.core.concurrent;
 
-import org.gorden.bloomfilter.examples.AbstractBloomFilter;
-import org.gorden.bloomfilter.examples.BloomFilter;
-import org.gorden.bloomfilter.examples.bitset.BitSet;
-import org.gorden.bloomfilter.examples.bitset.LockFreeBitSet;
-import org.gorden.bloomfilter.examples.hash.HashFunction;
-import org.gorden.bloomfilter.examples.hash.Murmur3_128HashFunction;
-import org.gorden.bloomfilter.examples.observer.BloomFilterObserver;
-import org.gorden.bloomfilter.examples.serializer.BloomFilterSerializer;
-import org.gorden.bloomfilter.examples.serializer.JdkSerializationBloomFilterSerializer;
+import org.gorden.bloomfilter.core.AbstractBloomFilter;
+import org.gorden.bloomfilter.core.bitset.BitSet;
+import org.gorden.bloomfilter.core.bitset.LockFreeBitSet;
+import org.gorden.bloomfilter.core.hash.HashFunction;
+import org.gorden.bloomfilter.core.hash.Murmur3_128HashFunction;
+import org.gorden.bloomfilter.core.observer.BloomFilterObserver;
+import org.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
+import org.gorden.bloomfilter.core.serializer.JdkSerializationBloomFilterSerializer;
 
 /**
  * In memory bloom filter

@@ -1,6 +1,6 @@
-package org.gorden.bloomfilter.examples.observer;
+package org.gorden.bloomfilter.core.observer;
 
-import org.gorden.bloomfilter.examples.BloomFilter;
+import org.gorden.bloomfilter.core.BloomFilter;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 

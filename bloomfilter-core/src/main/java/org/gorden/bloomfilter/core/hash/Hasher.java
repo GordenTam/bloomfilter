@@ -1,4 +1,4 @@
-package org.gorden.bloomfilter.examples.hash;
+package org.gorden.bloomfilter.core.hash;
 
 public interface Hasher {
 

@@ -1,10 +1,8 @@
 package org.gorden.bloomfilter.examples;
 
-import org.gorden.bloomfilter.aspect.annotation.BFMightContain;
-import org.gorden.bloomfilter.aspect.annotation.BFPut;
-import org.gorden.bloomfilter.examples.concurrent.ConcurrentBloomFilter;
-import org.gorden.bloomfilter.examples.hash.Murmur3_128HashFunction;
-import org.gorden.bloomfilter.examples.serializer.JdkSerializationBloomFilterSerializer;
+import org.gorden.bloomfilter.core.concurrent.ConcurrentBloomFilter;
+import org.gorden.bloomfilter.core.hash.Murmur3_128HashFunction;
+import org.gorden.bloomfilter.core.serializer.JdkSerializationBloomFilterSerializer;
 
 public class ConcurrentBloomFilterExample {
 
@@ -17,23 +15,11 @@ public class ConcurrentBloomFilterExample {
         concurrentBloomFilter.mightContain("b");
         concurrentBloomFilter.mightContain("c");
         concurrentBloomFilter.mightContain("d");
+
+        BloomFilterAspectTest bloomFilterAspectTest = new BloomFilterAspectTest();
+        bloomFilterAspectTest.test("test");
+        bloomFilterAspectTest.test1("a");
         concurrentBloomFilter.clear();
-    }
-
-    @BFPut(value = "test")
-    private String test(String str) {
-        System.out.println("bloomfilter put string" + str);
-        return str;
-    }
-
-    @BFMightContain(value = "test", fallback = "BFFallback")
-    private String test1(String str) {
-        return str;
-    }
-
-    private String BFFallback(String str) {
-        System.out.println();
-        return str;
     }
 
 }

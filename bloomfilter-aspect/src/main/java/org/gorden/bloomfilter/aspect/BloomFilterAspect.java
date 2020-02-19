@@ -6,8 +6,8 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.gorden.bloomfilter.examples.BloomFilter;
-import org.gorden.bloomfilter.examples.observer.BloomFilterObserver;
+import org.gorden.bloomfilter.core.BloomFilter;
+import org.gorden.bloomfilter.core.observer.BloomFilterObserver;
 
 import java.lang.reflect.Method;
 

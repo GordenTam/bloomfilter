@@ -1,6 +1,6 @@
 package org.gorden.bloomfilter.support;
 
-import org.gorden.bloomfilter.examples.RedisOperator;
+import org.gorden.bloomfilter.core.RedisOperator;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 

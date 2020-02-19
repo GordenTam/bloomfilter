@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AjcSettings">
+    <option name="ajcPath" value="$MAVEN_REPOSITORY$/org/aspectj/aspectjtools/1.9.2/aspectjtools-1.9.2.jar" />
+    <option name="cmdLineParams" value="-showWeaveInfo" />
+    <option name="delegateToJavac" value="true" />
+  </component>
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile name="Annotation profile for Unknown" enabled="true">
+        <sourceOutputDir name="../generated-sources/annotations" />
+        <sourceTestOutputDir name="../generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="maven-archiver (4)" />
+        <module name="maven-archiver (3)" />
+        <module name="maven-archiver (2)" />
+      </profile>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bloomfilter-aspect" />
-        <module name="bloomfilter-examples" />
         <module name="bloomfilter-spring-data-redis-support" />
+        <module name="bloomfilter-examples" />
         <module name="bloomfilter-core" />
+        <module name="bloomfilter-aspect" />
         <module name="spring-boot-starter-bloomfilter" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="maven-archiver (1)" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

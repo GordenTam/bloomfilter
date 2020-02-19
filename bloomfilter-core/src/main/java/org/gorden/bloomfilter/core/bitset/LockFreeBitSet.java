@@ -1,9 +1,9 @@
-package org.gorden.bloomfilter.examples.bitset;
+package org.gorden.bloomfilter.core.bitset;
 
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicLongArray;
 
-import static org.gorden.bloomfilter.examples.hash.Longs.divideCeiling;
+import static org.gorden.bloomfilter.core.hash.Longs.divideCeiling;
 
 /**
  * @author GordenTam

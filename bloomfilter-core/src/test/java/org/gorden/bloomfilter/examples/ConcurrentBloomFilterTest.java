@@ -1,8 +1,8 @@
-package org.gorden.bloomfilter.examples;
+package org.gorden.bloomfilter.core;
 
-import org.gorden.bloomfilter.examples.concurrent.ConcurrentBloomFilter;
-import org.gorden.bloomfilter.examples.hash.Murmur3_128HashFunction;
-import org.gorden.bloomfilter.examples.serializer.JdkSerializationBloomFilterSerializer;
+import org.gorden.bloomfilter.core.concurrent.ConcurrentBloomFilter;
+import org.gorden.bloomfilter.core.hash.Murmur3_128HashFunction;
+import org.gorden.bloomfilter.core.serializer.JdkSerializationBloomFilterSerializer;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;

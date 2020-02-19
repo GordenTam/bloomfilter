@@ -1,9 +1,9 @@
-package org.gorden.bloomfilter.examples;
+package org.gorden.bloomfilter.core;
 
-import org.gorden.bloomfilter.examples.hash.HashFunction;
-import org.gorden.bloomfilter.examples.hash.Murmur3_128HashFunction;
-import org.gorden.bloomfilter.examples.serializer.BloomFilterSerializer;
-import org.gorden.bloomfilter.examples.serializer.JdkSerializationBloomFilterSerializer;
+import org.gorden.bloomfilter.core.hash.HashFunction;
+import org.gorden.bloomfilter.core.hash.Murmur3_128HashFunction;
+import org.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
+import org.gorden.bloomfilter.core.serializer.JdkSerializationBloomFilterSerializer;
 
 public class BloomFilterConfiguration {
 

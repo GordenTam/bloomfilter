@@ -5,6 +5,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/bloomfilter-core/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/spring-boot-starter-bloomfilter/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/bloomfilter-spring-data-redis-support/target/maven-archiver/pom.properties" />
       </list>
     </option>
   </component>

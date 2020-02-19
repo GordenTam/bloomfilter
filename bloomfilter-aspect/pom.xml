@@ -4,66 +4,79 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cn.gorden</groupId>
+        <groupId>cn.gorden.bloomfilter</groupId>
         <artifactId>bloom-filter</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>bloomfilter-aspect</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
     <name>bloomfilter-aspect</name>
     <description>aspect support for bloomfilter</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <aspectj.version>1.9.4</aspectj.version>
     </properties>
 
     <dependencies>
 
         <dependency>
-            <groupId>cn.gorden</groupId>
+            <groupId>cn.gorden.bloomfilter</groupId>
             <artifactId>bloomfilter-core</artifactId>
-            <version>${version}</version>
-            <scope>provided</scope>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
-            <version>${aspectj.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>${aspectj.version}</version>
+            <version>${aspectj.runtime.version}</version>
         </dependency>
 
     </dependencies>
 
+    <!-- +========================================= -->
+    <!-- | Build settings                           -->
+    <!-- +========================================= -->
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>aspectj-maven-plugin</artifactId>
-                    <version>1.9.4</version>
-                    <configuration>
-                        <complianceLevel>1.8</complianceLevel>
-                        <source>1.8</source>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>compile</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>aspectj-maven-plugin</artifactId>
+                <version>1.11</version>
+                <configuration>
+                    <complianceLevel>1.8</complianceLevel>
+                    <includes>
+                        <include>**/*.java</include>
+                        <include>**/*.aj</include>
+                    </includes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>compile_with_aspectj</id>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>test-compile_with_aspectj</id>
+                        <goals>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjrt</artifactId>
+                        <version>${aspectj.runtime.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjtools</artifactId>
+                        <version>${aspectj.runtime.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
     </build>
-
 
 </project>

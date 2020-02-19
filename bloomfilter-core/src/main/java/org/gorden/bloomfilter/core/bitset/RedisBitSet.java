@@ -1,6 +1,6 @@
-package org.gorden.bloomfilter.examples.bitset;
+package org.gorden.bloomfilter.core.bitset;
 
-import org.gorden.bloomfilter.examples.RedisOperator;
+import org.gorden.bloomfilter.core.RedisOperator;
 
 import java.nio.charset.Charset;
 
