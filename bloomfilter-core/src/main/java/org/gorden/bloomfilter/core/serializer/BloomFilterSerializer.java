@@ -1,13 +1,11 @@
 package org.gorden.bloomfilter.core.serializer;
 
 /**
- * @author: GordenTam
- * @create: 2020-01-10
+ * @author GordenTam
  **/
 
-public interface BloomFilterSerializer<T> {
+public interface BloomFilterSerializer {
 
-    byte[] serialize(T var1) throws SerializationException;
+    byte[] serialize(Object var1) throws SerializationException;
 
-    T deserialize(byte[] var1) throws SerializationException;
 }

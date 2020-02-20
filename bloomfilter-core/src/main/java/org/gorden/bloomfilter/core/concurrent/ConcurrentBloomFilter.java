@@ -45,9 +45,7 @@ public class ConcurrentBloomFilter<T> extends AbstractBloomFilter<T> {
         }
         long numBits = optimalNumOfBits(expectedInsertions, fpp);
         int numHashFunctions = optimalNumOfHashFunctions(expectedInsertions, numBits);
-        ConcurrentBloomFilter<T> filter = new ConcurrentBloomFilter<T>(numHashFunctions, new LockFreeBitSet(numBits), bloomFilterSerializer, hashFunction);
-        BloomFilterObserver.registered(name, filter);
-        return filter;
+        return new ConcurrentBloomFilter<T>(numHashFunctions, new LockFreeBitSet(numBits), bloomFilterSerializer, hashFunction);
     }
 
 }

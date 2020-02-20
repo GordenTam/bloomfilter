@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
  * @author GordenTam
  **/
 @Aspect
-public class BloomFilterAspect {
+public class BloomFilterOperationAspect {
 
     @Pointcut("@annotation(org.gorden.bloomfilter.aspect.annotation.BFPut)")
     public void pointcut1() {
@@ -37,6 +37,7 @@ public class BloomFilterAspect {
         String name = bfput.value();
         Object returnObject = joinPoint.proceed();
         BloomFilter bf = BloomFilterObserver.getBloomFilter(name);
+        System.out.println(bf);
         bf.put(returnObject);
         return returnObject;
     }
@@ -53,12 +54,13 @@ public class BloomFilterAspect {
         String name = bfMightContain.value();
         Object returnObject = joinPoint.proceed();
         BloomFilter bf = BloomFilterObserver.getBloomFilter(name);
-        if (!bf.mightContain(returnObject)) {
-            return joinPoint.proceed();
+        if (bf.mightContain(returnObject)) {
+            return returnObject;
+        } else {
+            Object target = joinPoint.getTarget();
+            Method fallback = target.getClass().getMethod(bfMightContain.fallback(), methodSignature.getParameterTypes());
+            return fallback.invoke(target, joinPoint.getArgs());
         }
-        Object target = joinPoint.getTarget();
-        Method fallback = target.getClass().getMethod(bfMightContain.fallback(), methodSignature.getParameterTypes());
-        return fallback.invoke(target, joinPoint.getArgs());
     }
 
 }

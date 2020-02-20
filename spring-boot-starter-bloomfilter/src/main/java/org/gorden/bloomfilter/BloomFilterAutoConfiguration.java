@@ -1,6 +1,6 @@
 package org.gorden.bloomfilter;
 
-import org.gorden.bloomfilter.aspect.BloomFilterAspect;
+import org.gorden.bloomfilter.aspect.BloomFilterOperationAspect;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,8 +15,8 @@ public class BloomFilterAutoConfiguration {
     private BloomFilterProperties bloomFilterProperties;
 
     @Bean
-    public BloomFilterAspect bloomFilterAspect() {
-        return new BloomFilterAspect();
+    public BloomFilterOperationAspect bloomFilterAspect() {
+        return new BloomFilterOperationAspect();
     }
 
 }

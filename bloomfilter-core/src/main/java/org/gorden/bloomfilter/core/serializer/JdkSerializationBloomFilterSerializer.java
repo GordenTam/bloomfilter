@@ -6,7 +6,7 @@ import java.io.*;
  * @author GordenTam
  **/
 
-public class JdkSerializationBloomFilterSerializer implements BloomFilterSerializer<Object> {
+public class JdkSerializationBloomFilterSerializer implements BloomFilterSerializer{
 
     private static final byte[] EMPTYBYTE = new byte[0];
 
@@ -26,20 +26,6 @@ public class JdkSerializationBloomFilterSerializer implements BloomFilterSeriali
             return byteStream.toByteArray();
         } catch (Throwable var) {
             throw new SerializationException("Failed to serialize object using jdk serialization serializer", var);
-        }
-    }
-
-    public Object deserialize(byte[] bytes) {
-        if (bytes == null || bytes.length == 0) {
-            return null;
-        } else {
-            ByteArrayInputStream inputStream = new ByteArrayInputStream(bytes);
-            try {
-                ObjectInputStream objectInputStream = new ObjectInputStream(inputStream);
-                return objectInputStream.readObject();
-            } catch (Throwable var) {
-                throw new SerializationException("Cannot deserialize", var);
-            }
         }
     }
 }

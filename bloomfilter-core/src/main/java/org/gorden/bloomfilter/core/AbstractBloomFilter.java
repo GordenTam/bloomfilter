@@ -3,18 +3,20 @@ package org.gorden.bloomfilter.core;
 import org.gorden.bloomfilter.core.bitset.BitSet;
 import org.gorden.bloomfilter.core.hash.HashFunction;
 import org.gorden.bloomfilter.core.hash.Longs;
+import org.gorden.bloomfilter.core.hash.Murmur3_128HashFunction;
 import org.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
+import org.gorden.bloomfilter.core.serializer.JdkSerializationBloomFilterSerializer;
 
 /**
  * A Bloom filter implements refer to guava. Support optional bitSet, hashFunction and serializer implements.
  *
  * @author GordenTam
  */
-public abstract class AbstractBloomFilter<T> implements BloomFilter<T> {
+public abstract class AbstractBloomFilter implements BloomFilter {
 
     private int numHashFunctions;
 
-    private BloomFilterSerializer<T> bloomFilterSerializer;
+    private BloomFilterSerializer bloomFilterSerializer;
 
     private HashFunction hashFunction;
 
@@ -23,14 +25,38 @@ public abstract class AbstractBloomFilter<T> implements BloomFilter<T> {
     private AbstractBloomFilter() {
     }
 
-    protected AbstractBloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer<T> bloomFilterSerializer, HashFunction hashFunction) {
+    protected AbstractBloomFilter(int numHashFunctions, BitSet bitSet) {
+        this(numHashFunctions, bitSet, null, null);
+    }
+
+    protected AbstractBloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer) {
+        this(numHashFunctions, bitSet, bloomFilterSerializer, null);
+    }
+
+    protected AbstractBloomFilter(int numHashFunctions, BitSet bitSet, HashFunction hashFunction) {
+        this(numHashFunctions, bitSet, null, hashFunction);
+    }
+
+    protected AbstractBloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, HashFunction hashFunction) {
+        if(bitSet == null) {
+            throw new IllegalStateException("bitset must not be null");
+        }
+        if(numHashFunctions <= 0) {
+            throw new IllegalStateException(("numHashFunctions must greater than zero"));
+        }
+        if(bloomFilterSerializer == null) {
+            bloomFilterSerializer = new JdkSerializationBloomFilterSerializer();
+        }
+        if(hashFunction == null) {
+            hashFunction = new Murmur3_128HashFunction(0);
+        }
         this.numHashFunctions = numHashFunctions;
         this.bitSet = bitSet;
         this.bloomFilterSerializer = bloomFilterSerializer;
         this.hashFunction = hashFunction;
     }
 
-    public boolean mightContain(T object) {
+    public boolean mightContain(Object object) {
         long bitSize = bitSet.bitSize();
         byte[] bytes = hashFunction.hashBytes(raw(object));
         long hash1 = lowerEight(bytes);
@@ -46,7 +72,7 @@ public abstract class AbstractBloomFilter<T> implements BloomFilter<T> {
         return true;
     }
 
-    public boolean put(T object) {
+    public boolean put(Object object) {
         long bitSize = bitSet.bitSize();
         //使用murmurHash求得128位byte数组
         byte[] bytes = hashFunction.hashBytes(raw(object));
@@ -96,18 +122,16 @@ public abstract class AbstractBloomFilter<T> implements BloomFilter<T> {
         return (long) (-n * Math.log(p) / (Math.log(2) * Math.log(2)));
     }
 
-    private byte[] raw(T element) {
+    private byte[] raw(Object element) {
         return bloomFilterSerializer.serialize(element);
     }
 
     private long lowerEight(byte[] bytes) {
-        return Longs.fromBytes(
-                bytes[7], bytes[6], bytes[5], bytes[4], bytes[3], bytes[2], bytes[1], bytes[0]);
+        return Longs.fromBytes(bytes[7], bytes[6], bytes[5], bytes[4], bytes[3], bytes[2], bytes[1], bytes[0]);
     }
 
     private long upperEight(byte[] bytes) {
-        return Longs.fromBytes(
-                bytes[15], bytes[14], bytes[13], bytes[12], bytes[11], bytes[10], bytes[9], bytes[8]);
+        return Longs.fromBytes(bytes[15], bytes[14], bytes[13], bytes[12], bytes[11], bytes[10], bytes[9], bytes[8]);
     }
 
     public void clear() {

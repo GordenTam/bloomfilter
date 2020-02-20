@@ -3,14 +3,13 @@ package org.gorden.bloomfilter.core;
 import org.gorden.bloomfilter.core.bitset.BitSet;
 import org.gorden.bloomfilter.core.bitset.RedisBitSet;
 import org.gorden.bloomfilter.core.hash.HashFunction;
-import org.gorden.bloomfilter.core.observer.BloomFilterObserver;
 import org.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
 
 /**
  * @author GordenTam
  **/
 
-public class RedisBloomFilter<T> extends AbstractBloomFilter<T> {
+public class RedisBloomFilter extends AbstractBloomFilter {
 
     private String name;
 
@@ -18,7 +17,7 @@ public class RedisBloomFilter<T> extends AbstractBloomFilter<T> {
         super(numHashFunctions, bitSet, bloomFilterSerializer, hashFunction);
     }
 
-    public static <T> RedisBloomFilter<T> create(String name, long expectedInsertions, double fpp, RedisOperator redisOperator, BloomFilterSerializer bloomFilterSerializer, HashFunction hashFunction) {
+    public static RedisBloomFilter create(String name, long expectedInsertions, double fpp, RedisOperator redisOperator, BloomFilterSerializer bloomFilterSerializer, HashFunction hashFunction) {
         if (expectedInsertions <= 0) {
             throw new IllegalArgumentException(String.format("expectedInsertions (%s) must be > 0", expectedInsertions));
         }
@@ -30,9 +29,41 @@ public class RedisBloomFilter<T> extends AbstractBloomFilter<T> {
         }
         long numBits = optimalNumOfBits(expectedInsertions, fpp);
         int numHashFunctions = optimalNumOfHashFunctions(expectedInsertions, numBits);
-        RedisBloomFilter<T> redisBloomFilter = new RedisBloomFilter<T>(numHashFunctions, new RedisBitSet(numBits, name, redisOperator), bloomFilterSerializer, hashFunction);
-        BloomFilterObserver.registered(name, redisBloomFilter);
-        return redisBloomFilter;
+        return new RedisBloomFilter(numHashFunctions, new RedisBitSet(numBits, name, redisOperator), bloomFilterSerializer, hashFunction);
+    }
+
+    public static RedisBloomFilter create(Builder builder) {
+        return create(builder.name, builder);
+    }
+
+    public static class Builder {
+
+        private String name;
+        private long expectedInsertions;
+        private double fpp;
+        private RedisOperator redisOperator;
+        private BloomFilterSerializer bloomFilterSerializer;
+        private HashFunction hashFunction;
+
+        public Builder withName(String name) {
+            this.name = name;
+        }
+
+        public Builder withExpectedInsertions(long expectedInsertions) {
+            this.expectedInsertions = expectedInsertions;
+        }
+
+        public Builder withName() {
+            this.name = name;
+        }
+
+        public Builder withName() {
+            this.name = name;
+        }
+
+        public Builder withName() {
+            this.name = name;
+        }
     }
 
 }
