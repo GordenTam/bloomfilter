@@ -11,7 +11,7 @@ public class ConcurrentBloomFilterTest {
 
     @Test
     public void mightContainTest() {
-        ConcurrentBloomFilter<String> concurrentBloomFilter = ConcurrentBloomFilter.create("test", 100000, 0.03, new JdkSerializationBloomFilterSerializer(), new Murmur3_128HashFunction(0));
+        ConcurrentBloomFilter concurrentBloomFilter = ConcurrentBloomFilter.create("test", 100000, 0.03, new JdkSerializationBloomFilterSerializer(), new Murmur3_128HashFunction(0));
         concurrentBloomFilter.put("a");
         concurrentBloomFilter.put("b");
         concurrentBloomFilter.put("c");

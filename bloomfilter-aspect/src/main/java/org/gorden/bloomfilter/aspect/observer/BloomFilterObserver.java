@@ -1,4 +1,4 @@
-package org.gorden.bloomfilter.core.observer;
+package org.gorden.bloomfilter.aspect.observer;
 
 import org.gorden.bloomfilter.core.BloomFilter;
 import java.util.Map;

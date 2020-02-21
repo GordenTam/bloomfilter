@@ -7,7 +7,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.gorden.bloomfilter.core.BloomFilter;
-import org.gorden.bloomfilter.core.observer.BloomFilterObserver;
+import org.gorden.bloomfilter.aspect.observer.BloomFilterObserver;
 
 import java.lang.reflect.Method;
 
@@ -37,7 +37,6 @@ public class BloomFilterOperationAspect {
         String name = bfput.value();
         Object returnObject = joinPoint.proceed();
         BloomFilter bf = BloomFilterObserver.getBloomFilter(name);
-        System.out.println(bf);
         bf.put(returnObject);
         return returnObject;
     }

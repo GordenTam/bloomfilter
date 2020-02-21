@@ -11,10 +11,8 @@ import org.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
 
 public class RedisBloomFilter extends AbstractBloomFilter {
 
-    private String name;
-
-    private RedisBloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, HashFunction hashFunction) {
-        super(numHashFunctions, bitSet, bloomFilterSerializer, hashFunction);
+    private RedisBloomFilter(String name, int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, HashFunction hashFunction) {
+        super(name ,numHashFunctions, bitSet, bloomFilterSerializer, hashFunction);
     }
 
     public static RedisBloomFilter create(String name, long expectedInsertions, double fpp, RedisOperator redisOperator, BloomFilterSerializer bloomFilterSerializer, HashFunction hashFunction) {
@@ -29,11 +27,11 @@ public class RedisBloomFilter extends AbstractBloomFilter {
         }
         long numBits = optimalNumOfBits(expectedInsertions, fpp);
         int numHashFunctions = optimalNumOfHashFunctions(expectedInsertions, numBits);
-        return new RedisBloomFilter(numHashFunctions, new RedisBitSet(numBits, name, redisOperator), bloomFilterSerializer, hashFunction);
+        return new RedisBloomFilter(name, numHashFunctions, new RedisBitSet(numBits, name, redisOperator), bloomFilterSerializer, hashFunction);
     }
 
     public static RedisBloomFilter create(Builder builder) {
-        return create(builder.name, builder);
+        return create(builder.name, builder.expectedInsertions, builder.fpp, builder.redisOperator, builder.bloomFilterSerializer, builder.hashFunction);
     }
 
     public static class Builder {
@@ -47,22 +45,36 @@ public class RedisBloomFilter extends AbstractBloomFilter {
 
         public Builder withName(String name) {
             this.name = name;
+            return this;
         }
 
         public Builder withExpectedInsertions(long expectedInsertions) {
             this.expectedInsertions = expectedInsertions;
+            return this;
         }
 
-        public Builder withName() {
-            this.name = name;
+        public Builder withFpp(double fpp) {
+            this.fpp = fpp;
+            return this;
         }
 
-        public Builder withName() {
-            this.name = name;
+        public Builder withRedisOperator(RedisOperator redisOperator) {
+            this.redisOperator = redisOperator;
+            return this;
         }
 
-        public Builder withName() {
-            this.name = name;
+        public Builder withBloomFilterSerializer(BloomFilterSerializer bloomFilterSerializer) {
+            this.bloomFilterSerializer = bloomFilterSerializer;
+            return this;
+        }
+
+        public Builder withHashFunction(HashFunction hashFunction) {
+            this.hashFunction = hashFunction;
+            return this;
+        }
+
+        public RedisBloomFilter build() {
+            return RedisBloomFilter.create(this);
         }
     }
 

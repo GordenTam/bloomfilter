@@ -67,11 +67,6 @@
                         <artifactId>aspectjtools</artifactId>
                         <version>${aspectj.runtime.version}</version>
                     </dependency>
-                    <dependency>
-                        <groupId>cn.gorden.bloomfilter</groupId>
-                        <artifactId>bloomfilter-aspect</artifactId>
-                        <version>1.0.0-SNAPSHOT</version>
-                    </dependency>
                 </dependencies>
             </plugin>
         </plugins>

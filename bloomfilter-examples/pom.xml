@@ -56,8 +56,8 @@
                         <include>**/*.java</include>
                         <include>**/*.aj</include>
                     </includes>
-                    <aspectDirectory>src/main/aspect</aspectDirectory>
-                    <testAspectDirectory>src/test/aspect</testAspectDirectory>
+                    <aspectDirectory>src/main/java</aspectDirectory>
+                    <testAspectDirectory>src/test/java</testAspectDirectory>
                     <XaddSerialVersionUID>true</XaddSerialVersionUID>
                     <showWeaveInfo>true</showWeaveInfo>
                     <aspectLibraries>
@@ -90,7 +90,7 @@
                     <dependency>
                         <groupId>cn.gorden.bloomfilter</groupId>
                         <artifactId>bloomfilter-aspect</artifactId>
-                        <version>1.0.0-SNAPSHOT</version>
+                        <version>${project.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>

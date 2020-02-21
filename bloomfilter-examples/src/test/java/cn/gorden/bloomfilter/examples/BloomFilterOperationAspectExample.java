@@ -31,7 +31,7 @@ public class BloomFilterOperationAspectExample {
 
     @Test
     public void testAspect() {
-        ConcurrentBloomFilter<String> concurrentBloomFilter = ConcurrentBloomFilter.create("test", 100000, 0.03, new JdkSerializationBloomFilterSerializer(), new Murmur3_128HashFunction(0));
+        ConcurrentBloomFilter concurrentBloomFilter = ConcurrentBloomFilter.create("test", 100000, 0.03, new JdkSerializationBloomFilterSerializer(), new Murmur3_128HashFunction(0));
         BloomFilterOperationAspectExample bloomFilterAspectExample = new BloomFilterOperationAspectExample();
         bloomFilterAspectExample.bfPut("apple");
         String result = bloomFilterAspectExample.mightContain("banana");

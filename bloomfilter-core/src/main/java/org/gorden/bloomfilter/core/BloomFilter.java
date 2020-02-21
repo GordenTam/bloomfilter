@@ -24,4 +24,6 @@ public interface BloomFilter<T> {
      */
     void clear();
 
+    String getName();
+
 }

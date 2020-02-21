@@ -14,35 +14,36 @@ import org.gorden.bloomfilter.core.serializer.JdkSerializationBloomFilterSeriali
  */
 public abstract class AbstractBloomFilter implements BloomFilter {
 
+    private String name;
     private int numHashFunctions;
-
     private BloomFilterSerializer bloomFilterSerializer;
-
     private HashFunction hashFunction;
-
     private BitSet bitSet;
 
     private AbstractBloomFilter() {
     }
 
-    protected AbstractBloomFilter(int numHashFunctions, BitSet bitSet) {
-        this(numHashFunctions, bitSet, null, null);
+    protected AbstractBloomFilter(String name, int numHashFunctions, BitSet bitSet) {
+        this(name, numHashFunctions, bitSet, null, null);
     }
 
-    protected AbstractBloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer) {
-        this(numHashFunctions, bitSet, bloomFilterSerializer, null);
+    protected AbstractBloomFilter(String name, int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer) {
+        this(name, numHashFunctions, bitSet, bloomFilterSerializer, null);
     }
 
-    protected AbstractBloomFilter(int numHashFunctions, BitSet bitSet, HashFunction hashFunction) {
-        this(numHashFunctions, bitSet, null, hashFunction);
+    protected AbstractBloomFilter(String name, int numHashFunctions, BitSet bitSet, HashFunction hashFunction) {
+        this(name, numHashFunctions, bitSet, null, hashFunction);
     }
 
-    protected AbstractBloomFilter(int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, HashFunction hashFunction) {
+    protected AbstractBloomFilter(String name, int numHashFunctions, BitSet bitSet, BloomFilterSerializer bloomFilterSerializer, HashFunction hashFunction) {
+        if(name == null || name.trim().equals("")) {
+            throw new IllegalArgumentException("bloomfilter name can not be null");
+        }
         if(bitSet == null) {
-            throw new IllegalStateException("bitset must not be null");
+            throw new IllegalArgumentException("bitset must not be null");
         }
         if(numHashFunctions <= 0) {
-            throw new IllegalStateException(("numHashFunctions must greater than zero"));
+            throw new IllegalArgumentException(("numHashFunctions must greater than zero"));
         }
         if(bloomFilterSerializer == null) {
             bloomFilterSerializer = new JdkSerializationBloomFilterSerializer();
@@ -50,10 +51,15 @@ public abstract class AbstractBloomFilter implements BloomFilter {
         if(hashFunction == null) {
             hashFunction = new Murmur3_128HashFunction(0);
         }
+        this.name = name;
         this.numHashFunctions = numHashFunctions;
         this.bitSet = bitSet;
         this.bloomFilterSerializer = bloomFilterSerializer;
         this.hashFunction = hashFunction;
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public boolean mightContain(Object object) {

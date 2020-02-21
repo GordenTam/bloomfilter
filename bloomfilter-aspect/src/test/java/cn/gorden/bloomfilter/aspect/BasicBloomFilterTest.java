@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 public class BasicBloomFilterTest {
 
     private static UserService userService;
-    private static BloomFilter<String> bloomFilter;
+    private static BloomFilter bloomFilter;
 
     @BeforeClass
     public static void setUp(){

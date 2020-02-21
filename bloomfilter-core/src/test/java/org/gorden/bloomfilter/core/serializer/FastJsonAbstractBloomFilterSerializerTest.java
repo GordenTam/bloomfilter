@@ -9,7 +9,7 @@ public class FastJsonAbstractBloomFilterSerializerTest {
     @Test
     public void FastJsonBloomFilterSerializerSerializeTest() {
         byte[] expectedBytes = new byte[]{34, 116, 101, 115, 116, 34};
-        BloomFilterSerializer<String> fastJsonBloomFilterSerializer = new FastJsonBloomFilterSerializer<>(String.class);
+        BloomFilterSerializer fastJsonBloomFilterSerializer = new FastJsonBloomFilterSerializer();
         byte[] bytes = fastJsonBloomFilterSerializer.serialize("test");
         assertArrayEquals(expectedBytes, bytes);
     }
