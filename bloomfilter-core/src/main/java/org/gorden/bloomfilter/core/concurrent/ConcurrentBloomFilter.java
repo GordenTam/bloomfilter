@@ -1,7 +1,7 @@
 package org.gorden.bloomfilter.core.concurrent;
 
 import org.gorden.bloomfilter.core.AbstractBloomFilter;
-import org.gorden.bloomfilter.core.bitset.BitSet;
+import org.gorden.bloomfilter.common.BitSet;
 import org.gorden.bloomfilter.core.bitset.LockFreeBitSet;
 import org.gorden.bloomfilter.core.hash.HashFunction;
 import org.gorden.bloomfilter.core.hash.Murmur3_128HashFunction;

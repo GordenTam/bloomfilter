@@ -1,6 +1,7 @@
 package org.gorden.bloomfilter.core;
 
-import org.gorden.bloomfilter.core.bitset.BitSet;
+import org.gorden.bloomfilter.common.BitSet;
+import org.gorden.bloomfilter.common.BloomFilter;
 import org.gorden.bloomfilter.core.hash.HashFunction;
 import org.gorden.bloomfilter.core.hash.Longs;
 import org.gorden.bloomfilter.core.hash.Murmur3_128HashFunction;

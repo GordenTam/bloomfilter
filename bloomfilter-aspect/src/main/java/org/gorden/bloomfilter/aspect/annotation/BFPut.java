@@ -10,6 +10,4 @@ public @interface BFPut {
 
     String value();
 
-    boolean  allowCreatedWhenNotExists() default false;
-
 }

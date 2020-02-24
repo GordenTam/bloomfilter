@@ -1,6 +1,6 @@
 package org.gorden.bloomfilter.core;
 
-import org.gorden.bloomfilter.core.bitset.BitSet;
+import org.gorden.bloomfilter.common.BitSet;
 import org.gorden.bloomfilter.core.bitset.RedisBitSet;
 import org.gorden.bloomfilter.core.hash.HashFunction;
 import org.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
@@ -32,6 +32,10 @@ public class RedisBloomFilter extends AbstractBloomFilter {
 
     public static RedisBloomFilter create(Builder builder) {
         return create(builder.name, builder.expectedInsertions, builder.fpp, builder.redisOperator, builder.bloomFilterSerializer, builder.hashFunction);
+    }
+
+    public static Builder builder() {
+        return new Builder();
     }
 
     public static class Builder {

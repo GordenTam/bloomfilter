@@ -21,7 +21,7 @@
 
         <dependency>
             <groupId>cn.gorden.bloomfilter</groupId>
-            <artifactId>bloomfilter-core</artifactId>
+            <artifactId>bloomfilter-common</artifactId>
             <version>${project.version}</version>
         </dependency>
 

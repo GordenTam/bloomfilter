@@ -1,5 +1,7 @@
 package org.gorden.bloomfilter.core.bitset;
 
+import org.gorden.bloomfilter.common.BitSet;
+
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicLongArray;
 

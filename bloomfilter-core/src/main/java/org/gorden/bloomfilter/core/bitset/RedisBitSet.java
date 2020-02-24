@@ -1,5 +1,6 @@
 package org.gorden.bloomfilter.core.bitset;
 
+import org.gorden.bloomfilter.common.BitSet;
 import org.gorden.bloomfilter.core.RedisOperator;
 
 import java.nio.charset.Charset;

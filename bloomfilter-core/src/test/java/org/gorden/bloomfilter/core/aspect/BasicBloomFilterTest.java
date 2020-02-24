@@ -1,8 +1,8 @@
-package cn.gorden.bloomfilter.aspect;
+package org.gorden.bloomfilter.core.aspect;
 
 import org.gorden.bloomfilter.aspect.annotation.BFMightContain;
 import org.gorden.bloomfilter.aspect.annotation.BFPut;
-import org.gorden.bloomfilter.core.BloomFilter;
+import org.gorden.bloomfilter.common.BloomFilter;
 import org.gorden.bloomfilter.core.concurrent.ConcurrentBloomFilter;
 import org.gorden.bloomfilter.core.hash.Murmur3_128HashFunction;
 import org.gorden.bloomfilter.core.serializer.JdkSerializationBloomFilterSerializer;
