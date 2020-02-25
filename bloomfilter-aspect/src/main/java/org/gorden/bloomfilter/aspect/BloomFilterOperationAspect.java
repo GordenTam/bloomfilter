@@ -43,7 +43,7 @@ public class BloomFilterOperationAspect {
         Object returnObject = joinPoint.proceed();
         BloomFilter bf = BloomFilterObserver.getBloomFilter(name);
         if(bf == null) {
-            throw new IllegalStateException("the BloomFilter with name: " + name + "has not been created");
+            throw new IllegalStateException("the BloomFilter with name: " + name + " has not been created");
         }
         bf.put(returnObject);
         return returnObject;
@@ -59,17 +59,19 @@ public class BloomFilterOperationAspect {
         Method method = methodSignature.getMethod();
         org.gorden.bloomfilter.aspect.annotation.BFMightContain bfMightContain = method.getAnnotation(org.gorden.bloomfilter.aspect.annotation.BFMightContain.class);
         String name = bfMightContain.value();
-        if(name == null || name.trim().equals("")) {
+        if (name == null || name.trim().equals("")) {
             throw new IllegalStateException("the BloomFilter name can not be null");
         }
         Object returnObject = joinPoint.proceed();
         BloomFilter bf = BloomFilterObserver.getBloomFilter(name);
-        if(bf == null) {
-            throw new IllegalStateException("the BloomFilter with name: " + name + "has not been created");
+        if (bf == null) {
+            throw new IllegalStateException("the BloomFilter with name: " + name + " has not been created");
         }
-        if (bf.mightContain(returnObject)) {
+        if(bf.mightContain(returnObject)) {
             return returnObject;
-        } else {
+        }
+        //if the element not in bloomfilter, invocation the fallback method
+        else {
             Object target = joinPoint.getTarget();
             Method fallback = target.getClass().getMethod(bfMightContain.fallback(), methodSignature.getParameterTypes());
             if(fallback == null) {
@@ -78,8 +80,12 @@ public class BloomFilterOperationAspect {
             try {
                 fallback.invoke(target, joinPoint.getArgs());
             } catch (Throwable e) {
-                throw new
+                throw new FallbackDefinitionException();
             }
+        }
+
+        else {
+            Object target = joinPoint.getTarget();
         }
     }
 

@@ -20,7 +20,7 @@ public class BasicBloomFilterTest {
     private static BloomFilter bloomFilter;
 
     @BeforeClass
-    public static void setUp(){
+    public static void setUp() {
         userService = new UserService();
         bloomFilter = ConcurrentBloomFilter.create("test", 100000, 0.03, new JdkSerializationBloomFilterSerializer(), new Murmur3_128HashFunction(0));
     }
