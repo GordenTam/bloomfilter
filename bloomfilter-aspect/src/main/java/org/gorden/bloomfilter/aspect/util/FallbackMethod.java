@@ -7,28 +7,17 @@ import org.gorden.bloomfilter.aspect.exception.FallbackDefinitionException;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.lang.reflect.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class FallbackMethod {
 
 
     private final Method method;
-    private final boolean extended;
-    private final boolean defaultFallback;
 
-    public static final FallbackMethod ABSENT = new FallbackMethod(null, false, false);
+    public static final FallbackMethod ABSENT = new FallbackMethod(null);
 
     public FallbackMethod(Method method) {
-        this(method, false, false);
-    }
-
-    public FallbackMethod(Method method, boolean extended, boolean defaultFallback) {
         this.method = method;
-        this.extended = extended;
-        this.defaultFallback = defaultFallback;
     }
 
     public boolean isPresent() {
@@ -37,14 +26,6 @@ public class FallbackMethod {
 
     public Method getMethod() {
         return method;
-    }
-
-    public boolean isExtended() {
-        return extended;
-    }
-
-    public boolean isDefault() {
-        return defaultFallback;
     }
 
     public void validateReturnType(Method commandMethod) throws FallbackDefinitionException {
