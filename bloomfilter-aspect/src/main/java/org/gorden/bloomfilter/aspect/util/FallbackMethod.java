@@ -11,7 +11,6 @@ import java.util.*;
 
 public class FallbackMethod {
 
-
     private final Method method;
 
     public static final FallbackMethod ABSENT = new FallbackMethod(null);
@@ -48,8 +47,6 @@ public class FallbackMethod {
                 } else {
                     validateReturnType(commandMethod, method);
                 }
-
-
             } else if (ExecutionType.ASYNCHRONOUS == ExecutionType.getExecutionType(commandReturnType)) {
                 if (isCommand() && ExecutionType.ASYNCHRONOUS == getExecutionType()) {
                     validateReturnType(commandMethod, method);
