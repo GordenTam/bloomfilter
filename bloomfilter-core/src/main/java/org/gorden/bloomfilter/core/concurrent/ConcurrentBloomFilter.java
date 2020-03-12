@@ -2,6 +2,7 @@ package org.gorden.bloomfilter.core.concurrent;
 
 import org.gorden.bloomfilter.core.AbstractBloomFilter;
 import org.gorden.bloomfilter.common.BitSet;
+import org.gorden.bloomfilter.core.RedisBloomFilter;
 import org.gorden.bloomfilter.core.bitset.LockFreeBitSet;
 import org.gorden.bloomfilter.core.hash.HashFunction;
 import org.gorden.bloomfilter.core.hash.Murmur3_128HashFunction;
@@ -49,6 +50,10 @@ public class ConcurrentBloomFilter extends AbstractBloomFilter {
 
     public static ConcurrentBloomFilter create(Builder builder) {
         return create(builder.name, builder.expectedInsertions, builder.fpp, builder.bloomFilterSerializer, builder.hashFunction);
+    }
+
+    public static Builder builder() {
+        return new Builder();
     }
 
     public static class Builder {

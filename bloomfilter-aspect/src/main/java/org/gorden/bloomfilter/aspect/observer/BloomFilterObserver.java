@@ -3,8 +3,8 @@ package org.gorden.bloomfilter.aspect.observer;
 import org.gorden.bloomfilter.common.BloomFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import javax.annotation.Nullable;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class BloomFilterObserver {
@@ -18,8 +18,7 @@ public class BloomFilterObserver {
         map.put(name, bloomFilter);
     }
 
-    @Nullable
-    public static BloomFilter getBloomFilter(String name) {
-        return map.get(name);
+    public static Optional<BloomFilter> getBloomFilter(String name) {
+        return Optional.ofNullable(map.get(name));
     }
 }

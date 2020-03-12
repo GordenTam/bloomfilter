@@ -15,6 +15,14 @@ public class BloomFilterProperties {
 
     private List<String> names = new ArrayList<>();
 
+    private long expectedInsertions;
+
+    private double fpp;
+
+    private Class<?> serializationClass;
+
+    private Class<?> hashFunction;
+
     public BloomFilterProperties() {
     }
 
@@ -25,10 +33,6 @@ public class BloomFilterProperties {
     public void setType(BloomFilterType mode) {
         this.type = mode;
     }
-
-    private long expectedInsertions;
-
-    private double fpp;
 
     public List<String> getNames() {
         return this.names;
@@ -54,11 +58,31 @@ public class BloomFilterProperties {
         this.fpp = fpp;
     }
 
+    public Class<?> getSerializationClass() {
+        return serializationClass;
+    }
+
+    public void setSerializationClass(Class<?> serializationClass) {
+        this.serializationClass = serializationClass;
+    }
+
     public enum BloomFilterType {
         JDK,
         REDIS;
 
         private BloomFilterType() {
+        }
+    }
+
+    private class Redis {
+        private RedisOperationType SYN;
+    }
+
+    public enum RedisOperationType {
+        SYN,
+        REACTOR;
+
+        private RedisOperationType() {
         }
     }
 }

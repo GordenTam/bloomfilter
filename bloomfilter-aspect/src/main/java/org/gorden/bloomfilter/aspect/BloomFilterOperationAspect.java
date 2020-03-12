@@ -1,6 +1,5 @@
 package org.gorden.bloomfilter.aspect;
 
-import org.aspectj.lang.JoinPoint.StaticPart;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
@@ -10,7 +9,6 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.gorden.bloomfilter.aspect.annotation.BFMightContain;
 import org.gorden.bloomfilter.aspect.exception.FallbackDefinitionException;
 import org.gorden.bloomfilter.aspect.exception.FallbackInvocationException;
-import org.gorden.bloomfilter.aspect.util.FallbackMethodFinder;
 import org.gorden.bloomfilter.common.BloomFilter;
 import org.gorden.bloomfilter.aspect.observer.BloomFilterObserver;
 
@@ -46,11 +44,11 @@ public class BloomFilterOperationAspect {
             throw new IllegalStateException("the BloomFilter's name can not be null");
         }
         Object returnObject = joinPoint.proceed();
-        BloomFilter bf = BloomFilterObserver.getBloomFilter(name);
-        if(bf == null) {
+        Optional<BloomFilter> bf = BloomFilterObserver.getBloomFilter(name);
+        if(!bf.isPresent()) {
             throw new IllegalStateException("the BloomFilter with name: " + name + " has not been created");
         }
-        bf.put(returnObject);
+        bf.get().put(returnObject);
         return returnObject;
     }
 
@@ -68,49 +66,62 @@ public class BloomFilterOperationAspect {
             throw new IllegalStateException("the BloomFilter's name can not be null");
         }
         Object returnObject = joinPoint.proceed();
-        BloomFilter bf = BloomFilterObserver.getBloomFilter(name);
-        if (bf == null) {
+        Optional<BloomFilter> bf = BloomFilterObserver.getBloomFilter(name);
+        if (!bf.isPresent()) {
             throw new IllegalStateException("the BloomFilter with name: " + name + " has not been created");
         }
-        if (bf.mightContain(returnObject)) {
+        if (bf.get().mightContain(returnObject)) {
             return returnObject;
         }
         //if the element not in bloomFilter, invoke the fallback method
         else {
             Object target = joinPoint.getTarget();
-            return invokeFallbackMethod(target, methodAnnotatedWithBFMightContain);
+            Object[] fallbackMethodArgs = joinPoint.getArgs();
+            return invokeFallbackMethod(target, fallbackMethodArgs, methodAnnotatedWithBFMightContain);
         }
     }
 
-    private Object invokeFallbackMethod(Object target, Method methodAnnotatedWithBFMightContain) {
-        Method method = getFallbackMethod(target.getClass(), methodAnnotatedWithBFMightContain);
-        String name = getFallbackName(methodAnnotatedWithBFMightContain);
-        Class<?>[] fallbackParameterTypes = methodAnnotatedWithBFMightContain.getParameterTypes();
-        try {
-            method.invoke(target, fallbackParameterTypes);
-        } catch (Exception e) {
-
+    private Object invokeFallbackMethod(Object target, Object[] fallbackMethodArgs, Method methodAnnotatedWithBFMightContain) {
+        Class<?>[] parameterTypes = methodAnnotatedWithBFMightContain.getParameterTypes();
+        String fallBackMethodName = getFallbackName(methodAnnotatedWithBFMightContain);
+        Optional<Method> fallbackMethod = findFallBackMethod(target.getClass(), fallBackMethodName, parameterTypes);
+        if (!fallbackMethod.isPresent()) {
+            throw new FallbackDefinitionException("fallback method with name "+ fallBackMethodName + "with parameter types "
+                    + Arrays.toString(parameterTypes) + "is not found.");
+        } else {
+            Class<?> methodAnnotatedWithBFMightContainReturnType = methodAnnotatedWithBFMightContain.getReturnType();
+            Method fMethod = fallbackMethod.get();
+            Class<?> fallbackReturnType = fMethod.getReturnType();
+            if (!methodAnnotatedWithBFMightContainReturnType.isAssignableFrom(fallbackReturnType)) {
+                throw new FallbackDefinitionException("fallback method with name " + fallBackMethodName
+                        + " must return methodAnnotatedWithBFMightContainReturnType or its subclass");
+            }
+            try {
+                fMethod.setAccessible(true);
+                return fMethod.invoke(target, fallbackMethodArgs);
+            } catch (Throwable e) {
+                throw new FallbackInvocationException(e.getCause());
+            }
         }
     }
 
-    public static Optional<Method> getMethod(Class<?> type, String name, Class<?> methodAnnotatedWithBFMightContainReturnType, Class<?>... parameterTypes) {
+    private static Optional<Method> findFallBackMethod(Class<?> type, String name, Class<?>... parameterTypes) {
         Method[] methods = type.getDeclaredMethods();
         for (Method method : methods) {
-            if (method.getName().equals(name) && Arrays.equals(method.getParameterTypes(), parameterTypes) && method.getReturnType().isAssignableFrom(methodAnnotatedWithBFMightContainReturnType)) {
+            if (method.getName().equals(name) && Arrays.equals(method.getParameterTypes(), parameterTypes)) {
                 return Optional.of(method);
             }
         }
         Class<?> superClass = type.getSuperclass();
         if (superClass != null && !superClass.equals(Object.class)) {
-            return getMethod(superClass, name, methodAnnotatedWithBFMightContainReturnType, parameterTypes);
+            return findFallBackMethod(superClass, name, parameterTypes);
         } else {
             return Optional.empty();
         }
     }
 
-    public String getFallbackName(Method bfContainMethod) {
-        return bfContainMethod.getAnnotation(BFMightContain.class).fallback();
+    private String getFallbackName(Method methodAnnotatedWithBFMightContain) {
+        return methodAnnotatedWithBFMightContain.getAnnotation(BFMightContain.class).fallback();
     }
-
 
 }
