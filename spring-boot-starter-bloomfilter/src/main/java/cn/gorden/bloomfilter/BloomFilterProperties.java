@@ -15,13 +15,9 @@ public class BloomFilterProperties {
 
     private List<String> names = new ArrayList<>();
 
-    private long expectedInsertions;
+    private long expectedInsertions = 1000000L;
 
-    private double fpp;
-
-    private Class<?> serializationClass;
-
-    private Class<?> hashFunction;
+    private double fpp = 0.03;
 
     public BloomFilterProperties() {
     }
@@ -56,14 +52,6 @@ public class BloomFilterProperties {
 
     public void setFpp(double fpp) {
         this.fpp = fpp;
-    }
-
-    public Class<?> getSerializationClass() {
-        return serializationClass;
-    }
-
-    public void setSerializationClass(Class<?> serializationClass) {
-        this.serializationClass = serializationClass;
     }
 
     public enum BloomFilterType {

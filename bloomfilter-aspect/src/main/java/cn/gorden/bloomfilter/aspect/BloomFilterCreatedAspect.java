@@ -14,7 +14,7 @@ import cn.gorden.bloomfilter.common.BloomFilter;
 @Aspect
 public class BloomFilterCreatedAspect {
 
-    @Pointcut("initialization(*.new())")
+    @Pointcut("execution(*.new())")
     void anyDefaultConstructor() {
     }
 
@@ -25,7 +25,7 @@ public class BloomFilterCreatedAspect {
      * @param joinPoint    The currently executing joinPoint.
      * @param bloomFilter The bloomFilter instance just created.
      */
-    @Pointcut(value = "initialization(cn.gorden.bloomfilter.common.BloomFilter+.new(..)) "
+    @Pointcut(value = "execution(cn.gorden.bloomfilter.common.BloomFilter+.new(..)) "
             + "&& this(bloomFilter) "
             + "&& !anyDefaultConstructor()", argNames = "joinPoint, bloomFilter")
     void anyNonDefaultConstructor(final JoinPoint joinPoint, final BloomFilter bloomFilter) {

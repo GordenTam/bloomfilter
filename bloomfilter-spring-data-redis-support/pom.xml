@@ -22,7 +22,6 @@
             <groupId>cn.gorden.bloomfilter</groupId>
             <artifactId>bloomfilter-core</artifactId>
             <version>${project.version}</version>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>

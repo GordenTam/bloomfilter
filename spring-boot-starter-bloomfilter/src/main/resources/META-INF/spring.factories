@@ -1,4 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  cn.gorden.bloomfilter.BloomFilterAutoConfiguration, \
-  cn.gorden.bloomfilter.RedisBloomFilterConfiguration, \
+  cn.gorden.bloomfilter.BloomFilterAutoConfiguration,\
+  cn.gorden.bloomfilter.RedisBloomFilterConfiguration,\
   cn.gorden.bloomfilter.JDKBloomFilterConfiguration

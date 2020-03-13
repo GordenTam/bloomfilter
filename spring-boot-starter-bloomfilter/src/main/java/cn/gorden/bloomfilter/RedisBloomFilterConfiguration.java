@@ -17,7 +17,6 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
  * @author GordenTam
  * @since 2020-03-12
  **/
-
 @Configuration
 @AutoConfigureAfter(BloomFilterAutoConfiguration.class)
 @ConditionalOnProperty(value = "bloom-filter.type", havingValue = "REDIS")

@@ -14,31 +14,33 @@
     <description>spring boot auto config for bloom filter</description>
 
     <dependencies>
-
         <dependency>
             <groupId>cn.gorden.bloomfilter</groupId>
             <artifactId>bloomfilter-core</artifactId>
             <version>${project.version}</version>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>cn.gorden.bloomfilter</groupId>
             <artifactId>bloomfilter-spring-data-redis-support</artifactId>
             <version>${project.version}</version>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>cn.gorden.bloomfilter</groupId>
             <artifactId>bloomfilter-aspect</artifactId>
             <version>${project.version}</version>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>2.2.0.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
             <version>2.2.0.RELEASE</version>
         </dependency>
 
@@ -48,6 +50,7 @@
             <scope>test</scope>
             <version>2.2.0.RELEASE</version>
         </dependency>
+
 
     </dependencies>
 
