@@ -1,10 +1,10 @@
 package cn.gorden.bloomfilter.examples;
 
-import org.gorden.bloomfilter.aspect.annotation.BFMightContain;
-import org.gorden.bloomfilter.aspect.annotation.BFPut;
-import org.gorden.bloomfilter.core.concurrent.ConcurrentBloomFilter;
-import org.gorden.bloomfilter.core.hash.Murmur3_128HashFunction;
-import org.gorden.bloomfilter.core.serializer.JdkSerializationBloomFilterSerializer;
+import cn.gorden.bloomfilter.aspect.annotation.BFMightContain;
+import cn.gorden.bloomfilter.aspect.annotation.BFPut;
+import cn.gorden.bloomfilter.core.concurrent.ConcurrentBloomFilter;
+import cn.gorden.bloomfilter.core.hash.Murmur3_128HashFunction;
+import cn.gorden.bloomfilter.core.serializer.JdkSerializationBloomFilterSerializer;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
