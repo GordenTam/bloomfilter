@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author GordenTam
  **/
-@ConfigurationProperties(prefix = "bloomfilter")
+@ConfigurationProperties(prefix = "bloom-filter")
 public class BloomFilterProperties {
 
     private BloomFilterType type;
