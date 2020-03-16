@@ -9,7 +9,6 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <modules>
-        <module>bloomfilter-common</module>
         <module>bloomfilter-core</module>
         <module>bloomfilter-aspect</module>
         <module>bloomfilter-spring-data-redis-support</module>

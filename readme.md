@@ -1,1 +1,0 @@
-bloomfilter support store in redis refer to guava's implements

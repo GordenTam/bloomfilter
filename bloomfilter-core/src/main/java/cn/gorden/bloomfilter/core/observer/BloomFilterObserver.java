@@ -1,6 +1,6 @@
-package cn.gorden.bloomfilter.aspect.observer;
+package cn.gorden.bloomfilter.core.observer;
 
-import cn.gorden.bloomfilter.common.BloomFilter;
+import cn.gorden.bloomfilter.core.BloomFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.Map;

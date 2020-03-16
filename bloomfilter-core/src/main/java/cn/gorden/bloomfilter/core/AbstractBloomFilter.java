@@ -1,8 +1,7 @@
 package cn.gorden.bloomfilter.core;
 
-import cn.gorden.bloomfilter.common.BitSet;
+import cn.gorden.bloomfilter.core.bitset.BitSet;
 import cn.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
-import cn.gorden.bloomfilter.common.BloomFilter;
 import cn.gorden.bloomfilter.core.hash.HashFunction;
 import cn.gorden.bloomfilter.core.hash.Longs;
 import cn.gorden.bloomfilter.core.hash.Murmur3_128HashFunction;

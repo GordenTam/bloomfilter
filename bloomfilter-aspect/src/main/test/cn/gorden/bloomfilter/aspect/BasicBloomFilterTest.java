@@ -1,11 +1,11 @@
-//package cn.gorden.bloomfilter.core.aspect;
+//package cn.gorden.bloomfilter.aspect;
 //
+//import cn.gorden.bloomfilter.aspect.annotation.BFMightContain;
 //import cn.gorden.bloomfilter.aspect.annotation.BFPut;
+//import cn.gorden.bloomfilter.common.BloomFilter;
 //import cn.gorden.bloomfilter.core.concurrent.ConcurrentBloomFilter;
 //import cn.gorden.bloomfilter.core.hash.Murmur3_128HashFunction;
 //import cn.gorden.bloomfilter.core.serializer.JdkSerializationBloomFilterSerializer;
-//import cn.gorden.bloomfilter.aspect.annotation.BFMightContain;
-//import cn.gorden.bloomfilter.core.BloomFilter;
 //import org.junit.BeforeClass;
 //import org.junit.Test;
 //

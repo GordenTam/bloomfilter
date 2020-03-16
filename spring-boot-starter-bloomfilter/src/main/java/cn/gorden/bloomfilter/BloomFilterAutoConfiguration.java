@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Configuration;
 public class BloomFilterAutoConfiguration {
 
     @Bean
-    public BloomFilterOperationAspect bloomFilterAspect() {
+    public BloomFilterOperationAspect bloomFilterOperationAspect() {
         return new BloomFilterOperationAspect();
     }
 

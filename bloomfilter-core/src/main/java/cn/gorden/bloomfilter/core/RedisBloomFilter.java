@@ -1,6 +1,6 @@
 package cn.gorden.bloomfilter.core;
 
-import cn.gorden.bloomfilter.common.BitSet;
+import cn.gorden.bloomfilter.core.bitset.BitSet;
 import cn.gorden.bloomfilter.core.bitset.RedisBitSet;
 import cn.gorden.bloomfilter.core.hash.HashFunction;
 import cn.gorden.bloomfilter.core.serializer.BloomFilterSerializer;

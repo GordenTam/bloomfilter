@@ -21,7 +21,7 @@
 
         <dependency>
             <groupId>cn.gorden.bloomfilter</groupId>
-            <artifactId>bloomfilter-common</artifactId>
+            <artifactId>bloomfilter-core</artifactId>
             <version>${project.version}</version>
         </dependency>
 
@@ -32,44 +32,5 @@
         </dependency>
 
     </dependencies>
-
-    <!-- +========================================= -->
-    <!-- | Build settings                           -->
-    <!-- +========================================= -->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>aspectj-maven-plugin</artifactId>
-                <version>1.11</version>
-                <configuration>
-                    <complianceLevel>1.8</complianceLevel>
-                    <includes>
-                        <include>**/*.java</include>
-                        <include>**/*.aj</include>
-                    </includes>
-                    <aspectDirectory>src/main/java</aspectDirectory>
-                    <testAspectDirectory>src/test/java</testAspectDirectory>
-                    <XaddSerialVersionUID>true</XaddSerialVersionUID>
-                    <showWeaveInfo>true</showWeaveInfo>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>compile</goal>       <!-- use this goal to weave all your main classes -->
-                            <goal>test-compile</goal>  <!-- use this goal to weave all your test classes -->
-                        </goals>
-                    </execution>
-                </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjtools</artifactId>
-                        <version>${aspectj.runtime.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

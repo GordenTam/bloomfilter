@@ -3,7 +3,6 @@ package cn.gorden.bloomfilter.support;
 import cn.gorden.bloomfilter.core.RedisOperator;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
-
 import java.util.function.Function;
 
 public class SpringDataRedisOperator implements RedisOperator {

@@ -9,7 +9,6 @@ import cn.gorden.bloomfilter.core.RedisBloomFilter;
  * @author GordenTam
  * @since 2020-03-12
  **/
-
 public class RedisBloomFilterGenerator extends BloomFilterGenerator {
 
     private BloomFilterProperties bloomFilterProperties;

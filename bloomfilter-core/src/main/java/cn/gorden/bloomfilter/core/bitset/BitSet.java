@@ -1,4 +1,4 @@
-package cn.gorden.bloomfilter.common;
+package cn.gorden.bloomfilter.core.bitset;
 
 /**
  * @author GordenTam

@@ -1,6 +1,6 @@
 package cn.gorden.bloomfilter.core.concurrent;
 
-import cn.gorden.bloomfilter.common.BitSet;
+import cn.gorden.bloomfilter.core.bitset.BitSet;
 import cn.gorden.bloomfilter.core.bitset.LockFreeBitSet;
 import cn.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
 import cn.gorden.bloomfilter.core.AbstractBloomFilter;

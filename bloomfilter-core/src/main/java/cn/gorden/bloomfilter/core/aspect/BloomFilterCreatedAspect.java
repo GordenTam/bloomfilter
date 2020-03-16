@@ -1,12 +1,12 @@
-package cn.gorden.bloomfilter.aspect;
+package cn.gorden.bloomfilter.core.aspect;
 
-import cn.gorden.bloomfilter.aspect.observer.BloomFilterObserver;
+import cn.gorden.bloomfilter.core.BloomFilter;
+import cn.gorden.bloomfilter.core.observer.BloomFilterObserver;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.ConstructorSignature;
-import cn.gorden.bloomfilter.common.BloomFilter;
 
 /**
  * @author GordenTam
@@ -25,7 +25,7 @@ public class BloomFilterCreatedAspect {
      * @param joinPoint    The currently executing joinPoint.
      * @param bloomFilter The bloomFilter instance just created.
      */
-    @Pointcut(value = "execution(cn.gorden.bloomfilter.common.BloomFilter+.new(..)) "
+    @Pointcut(value = "execution(cn.gorden.bloomfilter.core.BloomFilter+.new(..)) "
             + "&& this(bloomFilter) "
             + "&& !anyDefaultConstructor()", argNames = "joinPoint, bloomFilter")
     void anyNonDefaultConstructor(final JoinPoint joinPoint, final BloomFilter bloomFilter) {
