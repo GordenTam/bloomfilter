@@ -33,7 +33,7 @@ public class RedisBitSet implements BitSet {
     public boolean get(long[] offsets) {
         boolean result = true;
         for (long offset : offsets) {
-            result = result & this.get(offsets);
+            result = result & this.get(offset);
         }
         return result;
     }
