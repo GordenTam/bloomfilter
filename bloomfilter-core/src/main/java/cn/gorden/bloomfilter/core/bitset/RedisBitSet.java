@@ -27,7 +27,7 @@ public class RedisBitSet implements BitSet {
     }
 
     private void initBitSet() {
-
+        redisOperator.setBit(rawKey, bitSize-1, false);
     }
 
     public boolean get(long[] offsets) {
@@ -50,8 +50,8 @@ public class RedisBitSet implements BitSet {
     }
 
     public boolean set(long offset) {
-        redisOperator.setBit(rawKey, offset);
-        return false;
+        redisOperator.setBit(rawKey, offset, true);
+        return true;
     }
 
     public long bitCount() {

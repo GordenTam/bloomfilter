@@ -5,6 +5,11 @@ import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import java.util.function.Function;
 
+/**
+ * redis operator using spring data redis, refer to DefaultRedisCacheWriter.java
+ * @author GordenTam
+ * @since 1.0
+ **/
 public class SpringDataRedisOperator implements RedisOperator {
 
     private RedisConnectionFactory connectionFactory;
@@ -14,8 +19,12 @@ public class SpringDataRedisOperator implements RedisOperator {
     }
 
     public void setBit(byte[] rawKey, long offset) {
+        this.setBit(rawKey, offset, true);
+    }
+
+    public void setBit(byte[] rawKey, long offset, boolean value) {
         this.execute((connection) -> {
-            connection.setBit(rawKey, offset, false);
+            connection.setBit(rawKey, offset, value);
             return "OK";
         });
     }

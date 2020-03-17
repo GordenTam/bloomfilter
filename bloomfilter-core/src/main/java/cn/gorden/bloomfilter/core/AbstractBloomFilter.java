@@ -97,7 +97,7 @@ public abstract class AbstractBloomFilter implements BloomFilter {
             bitsChanged |= bitSet.set((combinedHash & Long.MAX_VALUE) % bitSize);
             combinedHash += hash2;
         }
-        //返回修改了多少位
+        //返回是否修改成功
         return bitsChanged;
     }
 
