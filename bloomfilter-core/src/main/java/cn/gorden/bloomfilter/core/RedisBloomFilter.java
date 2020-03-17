@@ -4,6 +4,7 @@ import cn.gorden.bloomfilter.core.bitset.BitSet;
 import cn.gorden.bloomfilter.core.bitset.RedisBitSet;
 import cn.gorden.bloomfilter.core.hash.HashFunction;
 import cn.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
+import cn.gorden.bloomfilter.core.util.RedisOperator;
 
 /**
  * @author GordenTam

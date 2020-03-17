@@ -1,6 +1,6 @@
 package cn.gorden.bloomfilter;
 
-import cn.gorden.bloomfilter.core.RedisOperator;
+import cn.gorden.bloomfilter.core.util.RedisOperator;
 import cn.gorden.bloomfilter.core.hash.HashFunction;
 import cn.gorden.bloomfilter.core.serializer.BloomFilterSerializer;
 import cn.gorden.bloomfilter.core.RedisBloomFilter;
