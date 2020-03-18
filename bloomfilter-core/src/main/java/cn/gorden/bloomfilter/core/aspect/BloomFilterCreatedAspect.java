@@ -14,7 +14,7 @@ import org.aspectj.lang.reflect.ConstructorSignature;
 @Aspect
 public class BloomFilterCreatedAspect {
 
-    @Pointcut("execution(*.new())")
+    @Pointcut("initialization(*.new())")
     void anyDefaultConstructor() {
     }
 
@@ -25,7 +25,7 @@ public class BloomFilterCreatedAspect {
      * @param joinPoint    The currently executing joinPoint.
      * @param bloomFilter The bloomFilter instance just created.
      */
-    @Pointcut(value = "execution(cn.gorden.bloomfilter.core.BloomFilter+.new(..)) "
+    @Pointcut(value = "initialization(cn.gorden.bloomfilter.core.BloomFilter+.new(..)) "
             + "&& this(bloomFilter) "
             + "&& !anyDefaultConstructor()", argNames = "joinPoint, bloomFilter")
     void anyNonDefaultConstructor(final JoinPoint joinPoint, final BloomFilter bloomFilter) {

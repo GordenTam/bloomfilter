@@ -1,8 +1,9 @@
 <aspectj>
     <aspects>
         <aspect name="cn.gorden.bloomfilter.aspect.BloomFilterOperationAspect"/>
+        <aspect name="cn.gorden.bloomfilter.core.aspect.BloomFilterCreatedAspect"/>
         <weaver options="-verbose -showWeaveInfo">
-            <include within="cn.gorden.bloomfilter.examples..*"/>
+            <include within="*"/>
         </weaver>
     </aspects>
 </aspectj>
